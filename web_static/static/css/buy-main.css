@@ -1,0 +1,120 @@
+main{
+	background-color: #F1F5F8;
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+main .inside-main{
+	margin: auto;
+	width: 85%;
+}
+.filter-results{
+	height: 50px;
+	border-bottom: 1px solid #E2E6E9;
+	margin-bottom: 5px;
+}
+.filter-results h4{
+	color: #607D8B;
+	padding-left: 10px;
+}
+.results{
+	background-color: #FFF;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.upper-result{
+	display: flex;
+}
+.result-img{
+	padding: 10px;
+	flex: 1 1 40%;
+}
+.result-img:hover{
+	background-color: #F5F5F5;
+}
+.details{
+	flex-grow: 2;
+}
+.result-img .big-img{
+	width: 100%;
+}
+.result-img .big-img img{
+	width: 100%;
+}
+.result-img .smal-img{
+	display: flex;
+	justify-content: space-between;
+}
+.smal-img .inner-small-img{
+	flex: 0 0 155px;
+}
+.smal-img .inner-small-img img{
+	width: 100%;
+	height: 100%;
+}
+/* .details{
+	background-color: green;
+} */
+.details:hover{
+	background-color: #F5F5F5;
+}
+.details .buttons{
+	height: 80px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.details .buttons button{
+	border-radius: 0;
+	margin-left: 10px;
+}
+.buttons button.new{
+	padding: 10px 25px 10px 25px;
+	background-color: #F13054;
+	border: none;
+	color: #fff;
+	font-weight: 600;
+}
+.buttons button.sale{
+	padding: 10px 40px 10px 40px;
+	background-color: #EBFCFB;
+	border: none;
+	color: #16706a;
+	font-weight: 600;
+}
+.details .description{
+	padding-left: 10px;
+	padding-right: 20px;
+}
+.details .description .inner-description{
+	line-height: 30px;
+	border-bottom: 1px solid #E2E6E9;
+	padding-bottom: 30px;
+}
+.description .inner-description :nth-child(3){
+	line-height: 60px;
+}
+.description .inner-description p .location{
+	color: #F13054;
+}
+.price{
+	padding: 10px;
+}
+.price .text-price{
+	margin-bottom: 10px;
+}
+.price .amount{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.price .amount h4{
+	color: #F13054	;
+}
+.price .amount button{
+	background-color: #000;
+	color: #fff;
+	padding: 10px 20px 10px 20px;
+	border: none;
+	font-weight: 700;
+	font-size: 18px;
+}
