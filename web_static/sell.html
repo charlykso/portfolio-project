@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap" rel="stylesheet">
     <title>sell</title>
     <link rel="stylesheet" href="static/css/sell.css">
 </head>
 <body>
     <div class="head">FILL IN THE MANDETORY FIELDS HERE</div>
     <div class="wrapper">
-        <img src="" alt="">
+        <img src="static/images/authentified-pix.jpg" alt="" class="img">
         <p>add at list four pictures here</p>
         <form>
             <label for="property type">property type</label>
@@ -19,13 +20,15 @@
             <label for="title">title</label>
             <input type="text" id="title">
             <br>
-            <label for="description">discription</label>
-            <input type="text" id="description">
+            <label for="description">discription</label><br>
+            <textarea name="description" id="des" cols="30" rows="10"></textarea>
             <br>
             <label for="price">price</label>
             <input type="number" id="price">
+            <br>
             <label for="state">state</label>
             <input type="state" id="state">
+            <br>
              <label for="squarem">Square meters (㎡)</label>
              <input type="number" id="squarem">
             <br>
@@ -37,7 +40,7 @@
              </select>
         </form>
     </div>
-    <div class="contact">
+    <div class="contact wrapper">
         <form action="">
             <label for="name">Name</label>
             <input type="text" id="name">
