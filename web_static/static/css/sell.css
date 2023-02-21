@@ -26,9 +26,20 @@ body{
 .pix{
   box-shadow: 0px 2px 4px rgb(168 168 168 / 50%);
   border-radius: 10px;
-  overflow-x: auto;
-  overflow-y: hidden;
 }
+div.pix {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.pix a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
 .img{
     border: 1px solid #ddd;
   border-radius: 4px;
