@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap" rel="stylesheet">
     <title>sell</title>
+    <script
+  src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+  crossorigin="anonymous"></script>
     <link rel="stylesheet" href="static/css/sell.css">
+    <link rel="icon" href="static/images/authentified-website-favicon-color.png">
+
 </head>
 <body>
     <div>
@@ -24,15 +30,15 @@
         
         <p>add at list four pictures here</p>
         <form>
-            <input type="text" class="form__input" id="property type" placeholder="property type">
+            <input type="text" class="form__input" id="property type" placeholder="property type" required>
             <br>
-            <input type="text" class="form__input" id="title" placeholder="title">
+            <input type="text" class="form__input" id="title" placeholder="title" required>
             <br>
             <textarea name="description" class="description" id="des" cols="50" rows="10" placeholder="Description"></textarea>
             <br>
-            <input type="number" class="form__input" id="price" placeholder="price">
+            <input type="number" class="form__input" id="price" placeholder="price"required>
             <br>
-            <input type="state" class="form__input" id="state" placeholder="state">
+            <input type="state" class="form__input" id="state" placeholder="state" required>
             <br>
              <input type="number" class="form__input" id="squarem" placeholder="Square meters (㎡)">
             <br>
@@ -47,16 +53,15 @@
     
     <div class="contact wrapper">
         <form action="">
-            <input type="text" class="form__input" id="name" placeholder="Name">
+            <input type="text" class="form__input" id="name" placeholder="Name" required>
             <br>
-            <input type="number" class="form__input" id="phone" placeholder="phone">
+            <input type="number" class="form__input" id="phone" placeholder="phone" required>
             <br>
-            <input type="email" class="form__input" id="email" placeholder="email">
+            <input type="email" class="form__input" id="email" placeholder="email"required>
 
         </form><br><br>
-        <button class="form__button" type="submit">POST</button>
+        <button class="form__button" type="submit">POST</button required>
     </div>
     </div>
-    
 </body>
 </html>
