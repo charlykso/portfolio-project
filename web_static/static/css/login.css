@@ -1,7 +1,7 @@
 body{
-    --color-primary: rgb(224, 96, 113);
-    --color-primary-dark:rgb(170, 9, 36);
-    --color-secondry:rgb(62, 137, 223);
+    --color-primary: #F03B23;
+    --color-primary-dark: #a52210;
+    --color-secondry:#020347;
     --color-error: #ff0000;
     --color-success: #459745;
     --border-redius: 4px;
@@ -60,7 +60,7 @@ font: 500 1rem 'Roboto', sans-serif;
     border-radius: var(--border-redius);
     border: 1px solid #dddddd;
     outline: none;
-    background: #eeeeee;
+    background: #FFFFFF;
     transition: background 0.2s, border-color 0.2s;
 }
 .form__input:focus{

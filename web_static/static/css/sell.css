@@ -1,7 +1,7 @@
 body{
-    --color-primary: rgb(224, 96, 113);
-    --color-primary-dark:rgb(170, 9, 36);
-    --color-secondry:rgb(62, 137, 223);
+    --color-primary: #F03B23;
+    --color-primary-dark: #a52210;
+    --color-secondry:#020347;
     --color-error: #ff0000;
     --color-success: #459745;
     --border-redius: 4px;
@@ -34,7 +34,7 @@ div.pix {
 
 div.pix a {
   display: inline-block;
-  color: white;
+  color: #FFFFFF;
   text-align: center;
   padding: 14px;
   text-decoration: none;
@@ -55,6 +55,7 @@ div.pix a {
   border-radius: 10px;
   margin: 30px auto 10px;
   padding: 57px;
+  align-content: center;
     
   
 }
@@ -75,25 +76,30 @@ label{
   border-radius: var(--border-redius);
   border: 1px solid #dddddd;
   outline: none;
-  background: #eeeeee;
+  background: #FFFFFF;
   transition: background 0.2s, border-color 0.2s;
   font: 500 1rem 'Roboto', sans-serif;
 }
 .form__input:focus{
   border-color: var(--color-primary);
-  background: #ffffff;
+  background: #FFFFFF;
 }
 .form__button{
-  width: 100%;
+  width: 60%;
   padding: 1rem 2rem;
   font-weight: bold;
   font-size: 1.1rem;
-  color: #ffffff;
+  color: #FFFFFF;
   border: none;
   border-radius: var(--border-redius);
   outline: none;
   cursor: pointer;
   background: var(--color-primary);
+  
+}
+.form__button{
+  text-align: center;
+
 }
 .form__button:hover{
   background: var(--color-primary-dark);
