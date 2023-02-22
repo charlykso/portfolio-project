@@ -51,9 +51,7 @@ main .inside-main{
 	width: 100%;
 	height: 100%;
 }
-/* .details{
-	background-color: green;
-} */
+
 .details:hover{
 	background-color: #F5F5F5;
 }

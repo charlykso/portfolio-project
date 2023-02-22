@@ -1,0 +1,121 @@
+.details-inside-main {
+	margin: auto;
+	width: 85%;
+}
+.details-inside-main .img-area{
+	display: flex;
+	gap: 6px;
+	
+}
+.img-area .big-img{
+	flex-basis: 90%;
+}
+.img-area .big-img img{
+	width: 100%;
+	height: 100%;
+}
+.small-img{
+	width: 275px;
+	align-content: stretch;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 6px;
+}
+.small-img img{
+	width: 100%;
+	height: 100%;
+}
+.under-img{
+	display: flex;
+	/* justify-content: space-between; */
+	padding: 10px 0 10px;
+	align-items: center;
+}
+.buttons{
+	flex-basis: 40%;
+}
+.buttons button.new{
+	padding: 10px 25px 10px 25px;
+	background-color: #F13054;
+	border: none;
+	color: #fff;
+	font-weight: 600;
+}
+.buttons button.sale{
+	padding: 10px 40px 10px 40px;
+	background-color: #EBFCFB;
+	border: none;
+	color: #16706a;
+	font-weight: 600;
+}
+.under-img .time{
+	flex-basis: 30%;
+}
+.under-img .time .time-icon{
+	color: #F13054;
+}
+.under-img .view{
+	flex-basis: auto;
+}
+.under-img .view .eye-icon{
+	color: #F13054;
+}
+.content-description{
+	display: flex;
+	gap: 10px;
+}
+.left-description{
+	background-color: #fff;
+	padding: 30px;
+	display: flex;
+	flex-basis: 70%;
+	font-family: Arial, Helvetica, sans-serif;
+	border-radius: 5px;
+}
+.left-description .price{
+	color: #F13054;
+	font-weight: 700;
+}
+.desc-details .desc1{
+	line-height: 3rem;
+}
+.desc-details .desc1 .location-icon{
+	color: #F13054;
+}
+.desc-details .desc2{
+	line-height: 2rem;
+}
+
+.desc-details .desc2 p a{
+	text-decoration: none;
+}
+.desc-details .desc3{
+	line-height: 2rem;
+}
+.owner-information{
+	background-color: #fff;
+	flex-basis: 30%;
+	font-family: Arial, Helvetica, sans-serif;
+	border-radius: 5px;
+}
+.owner-information .owners-heading{
+	background-color: #F13054;
+	color: #fff;
+	height: 40px;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 15px;
+}
+.owner-information .owners-body{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	line-height: 2rem;
+}
+.owner-information .owners-body p{
+	color: #F13054;
+}
