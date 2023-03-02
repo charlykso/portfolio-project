@@ -137,8 +137,12 @@
 	width: 100%;
 }
 .desc-icons .desc2 .icon{
-	width: 5rem;
+	width: 6rem;
 	height: auto;
+	margin-bottom: -12px;
+}
+.desc-icons .desc2 h4{
+	margin-top: -10px;
 }
 .desc-icons .desc2 .icon img{
 	width: 100%;
