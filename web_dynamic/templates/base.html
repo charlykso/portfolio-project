@@ -4,16 +4,17 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Authentified | Buy property</title>
-		<link rel="stylesheet" href="static/css/buy-header.css" />
-		<link rel="stylesheet" href="static/css/body.css" />
-		<link rel="stylesheet" href="static/css/buy-section.css">
-		<link rel="stylesheet" href="static/css/buy-footer.css">
-		<link rel="stylesheet" href="static/css/buy-main.css">
-		<link rel="stylesheet" href="static/css/details-main.css">
+		<title>{% block title %}
+			
+		{% endblock %} | Authentified</title>
+		<link rel="stylesheet" href="../static/css/buy-header.css" />
+		<link rel="stylesheet" href="../static/css/body.css" />
+		<link rel="stylesheet" href="../static/css/buy-section.css">
+		<link rel="stylesheet" href="../static/css/buy-footer.css">
+		<link rel="stylesheet" href="../static/css/buy-main.css">
 		<link
 			rel="icon"
-			href="static/images/authentified-website-favicon-white.png"
+			href="../static/images/authentified-website-favicon-white.png"
 		/>
 		<link
 			rel="stylesheet"
@@ -90,7 +91,7 @@
 						<div class="logo">
 							<a href="index.html">
 								<img
-									src="static/images/authentified-high-resolution-logo-color-on-transparent-background.png"
+									src="../static/images/authentified-high-resolution-logo-color-on-transparent-background.png"
 									alt=""
 								/>
 							</a>
@@ -114,82 +115,16 @@
 				</div>
 			</section>
 			<main class="main">
-				<div class="details-inside-main">
-					<div class="img-area">
-						<div class="big-img">
-							<img src="static/images/bg4.png" alt="">
-						</div>
-						<div class="small-img">
-							<div class="small-img1 img">
-								<img src="static/images/bg5.jpg" alt="">
-							</div>
-							<div class="small-img2 img">
-								<img src="static/images/bg3.jpg" alt="">
-							</div>
-							<div class="small-img3 img">
-								<img src="static/images/bg4.png" alt="">
-							</div>
-						</div>
-					</div>
-					<div class="under-img">
-						<div class="buttons">
-							<button class="sale">SALE</button>
-							<button class="new">NEW</button>
-						</div>
-						<div class="time">
-							<i class="fa fa-calendar-check-o time-icon" aria-hidden="true"></i> 2023-02-17 2:03:40.000
-						</div>
-						<div class="view">
-							<i class="fa fa-eye eye-icon" aria-hidden="true"></i> 25245 views
-						</div>
-					</div>
-					<div class="content-description">
-						<div class="left-description">
-							<div class="desc-details">
-								<div class="desc1">
-									<h2>4 Units 4 Bedroom terrace duplex</h2>
-									<p><i class="fa fa-map-marker location-icon" aria-hidden="true"></i> Gaduwa, Municipal area council, Abuja</p>
-								</div>
-								<div class="desc2">
-									<h4>Description</h4>
-									<p>
-										4 units of 4 bedroom terrace duplex for sale
-									</p>
-									<p class="read-more">
-										Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, repellat. <a href="#">Read more</a>
-									</p>
-								</div>
-								<div class="desc3">
-									<h4>Landmarks</h4>
-									<p><input type="checkbox" checked> Supermarket</p>
-									<p><input type="checkbox" checked> School</p>
-								</div>
-
-							</div>
-							<div class="price">
-								&#8358;38,000,000
-							</div>
-						</div>
-						<div class="owner-information">
-							<div class="owners-heading">
-								<h4>owner information</h4>
-							</div>
-							<div class="owners-body">
-								<h2>Name of the owner</h2>
-								<p><i class="fa fa-mobile" aria-hidden="true"></i> 07062682820 </p>
-								<p><i class="fa fa-phone" aria-hidden="true"></i> +2347062682820 </p>
-								<p><i class="fa fa-envelope" aria-hidden="true"></i> Authentified@info.com </p>
-							</div>
-						</div>
-					</div>
-				</div>
+				{% block content %}
+				
+				{% endblock %}
 			</main>
 			<footer class="footer">
 				<div class="top-footer">
 					<div class="first-item footer-flex">
 						<div class="first-item-img">
 							<img
-								src="static/images/authentified-high-resolution-logo-white-on-transparent-background.png"
+								src="../static/images/authentified-high-resolution-logo-white-on-transparent-background.png"
 								alt=""
 							/>
 						</div>

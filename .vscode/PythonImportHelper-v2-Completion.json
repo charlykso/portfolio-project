@@ -121,6 +121,22 @@
         "documentation": {}
     },
     {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
         "label": "CORS",
         "importPath": "flask_cors",
         "description": "flask_cors",
@@ -657,6 +673,24 @@
         "description": "models.user",
         "peekOfCode": "class User(BaseModel, Base):\n    \"\"\"Representation of a user \"\"\"\n    __tablename__ = 'users'\n    email = Column(String(128), nullable=False)\n    password = Column(String(200), nullable=False)\n    firstname = Column(String(128), nullable=True)\n    lastname = Column(String(128), nullable=True)\n    gender = Column(String(10), nullable=False)\n    phone_no = Column(String(20), nullable=False)\n    properties = relationship(\"Property\",",
         "detail": "models.user",
+        "documentation": {}
+    },
+    {
+        "label": "property",
+        "kind": 2,
+        "importPath": "web_dynamic.buy",
+        "description": "web_dynamic.buy",
+        "peekOfCode": "def property():\n    \"\"\"List all the users\"\"\"\n    return render_template(\"testbase.html\")\nif __name__ == \"__main__\":\n    \"\"\" Main Function \"\"\"\n    app.run(host='0.0.0.0', port=5002, debug=True)",
+        "detail": "web_dynamic.buy",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "web_dynamic.buy",
+        "description": "web_dynamic.buy",
+        "peekOfCode": "app = Flask(__name__)\n# @app.teardown_appcontext\n# def close_db(error):\n#     \"\"\"Remove the current sqlalchemy session\"\"\"\n#     storage.close()\n@app.route(\"/properties\", strict_slashes=False)\ndef property():\n    \"\"\"List all the users\"\"\"\n    return render_template(\"testbase.html\")\nif __name__ == \"__main__\":",
+        "detail": "web_dynamic.buy",
         "documentation": {}
     }
 ]
