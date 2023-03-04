@@ -40,10 +40,10 @@ Swagger(app)
 
 if __name__ == "__main__":
     """ Main Function """
-    host = environ.get('HBNB_API_HOST')
-    port = environ.get('HBNB_API_PORT')
+    host = environ.get('AUTH_API_HOST')
+    port = environ.get('AUTH_API_PORT')
     if not host:
         host = '0.0.0.0'
     if not port:
-        port = '5000'
+        port = '5003'
     app.run(host=host, port=port, threaded=True, debug=True)

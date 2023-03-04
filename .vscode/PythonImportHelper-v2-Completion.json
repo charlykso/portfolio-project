@@ -590,7 +590,7 @@
         "kind": 6,
         "importPath": "models.engine.db_storage",
         "description": "models.engine.db_storage",
-        "peekOfCode": "class DBStorage:\n    \"\"\"interaacts with the MySQL database\"\"\"\n    __engine = None\n    __session = None\n    def __init__(self):\n        \"\"\"Instantiate a DBStorage object\"\"\"\n        HBNB_MYSQL_USER = getenv('HBNB_MYSQL_USER')\n        HBNB_MYSQL_PWD = getenv('HBNB_MYSQL_PWD')\n        HBNB_MYSQL_HOST = getenv('HBNB_MYSQL_HOST')\n        HBNB_MYSQL_DB = getenv('HBNB_MYSQL_DB')",
+        "peekOfCode": "class DBStorage:\n    \"\"\"interaacts with the MySQL database\"\"\"\n    __engine = None\n    __session = None\n    def __init__(self):\n        \"\"\"Instantiate a DBStorage object\"\"\"\n        AUTH_MYSQL_USER = getenv('AUTH_MYSQL_USER')\n        AUTH_MYSQL_PWD = getenv('AUTH_MYSQL_PWD')\n        AUTH_MYSQL_HOST = getenv('AUTH_MYSQL_HOST')\n        AUTH_MYSQL_DB = getenv('AUTH_MYSQL_DB')",
         "detail": "models.engine.db_storage",
         "documentation": {}
     },
@@ -599,7 +599,7 @@
         "kind": 5,
         "importPath": "models.engine.db_storage",
         "description": "models.engine.db_storage",
-        "peekOfCode": "classes = {\"Property\": Property, \"Property_img\": Property_img,\n           \"Address\": Address, \"Review\": Review, \"User\": User}\nclass DBStorage:\n    \"\"\"interaacts with the MySQL database\"\"\"\n    __engine = None\n    __session = None\n    def __init__(self):\n        \"\"\"Instantiate a DBStorage object\"\"\"\n        HBNB_MYSQL_USER = getenv('HBNB_MYSQL_USER')\n        HBNB_MYSQL_PWD = getenv('HBNB_MYSQL_PWD')",
+        "peekOfCode": "classes = {\"Property\": Property, \"Property_img\": Property_img,\n           \"Address\": Address, \"Review\": Review, \"User\": User}\nclass DBStorage:\n    \"\"\"interaacts with the MySQL database\"\"\"\n    __engine = None\n    __session = None\n    def __init__(self):\n        \"\"\"Instantiate a DBStorage object\"\"\"\n        AUTH_MYSQL_USER = getenv('AUTH_MYSQL_USER')\n        AUTH_MYSQL_PWD = getenv('AUTH_MYSQL_PWD')",
         "detail": "models.engine.db_storage",
         "documentation": {}
     },
