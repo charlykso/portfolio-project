@@ -52,6 +52,12 @@ def create_user():
         abort(400, "Not a JSON")
     if "email" not in request.get_json():
         abort(400, "Missing email")
+    if "firstname" not in request.get_json():
+        abort(400, "Missing firstname")
+    if "lastname" not in request.get_json():
+        abort(400, "Missing lastname")
+    if "phone_no" not in request.get_json():
+        abort(400, "Missing phone number")
     if "password" not in request.get_json():
         abort(400, "Missing Password")
     user = User(**request.get_json())

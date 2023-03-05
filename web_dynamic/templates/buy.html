@@ -169,6 +169,10 @@
 					</div>
 				</div>
 			</main>
+			{% for user in users %}
+				<h2>{{user.firstname}} {{user.lastname}}</h2>
+				<h4></h4>
+			{% endfor %}
 			<footer class="footer">
 				<div class="top-footer">
 					<div class="first-item footer-flex">

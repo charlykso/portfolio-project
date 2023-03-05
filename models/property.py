@@ -20,6 +20,7 @@ class Property(BaseModel, Base):
     landmark = Column(String(200), nullable=True)
     search_term = Column(String(255), nullable=False)
     user_id = Column(String(60), ForeignKey('users.id'), nullable=False)
+    type = Column(String(60), nullable=False)
     property_imgs = relationship("Property_img",
                               backref="property",
                               cascade="all, delete, delete-orphan")

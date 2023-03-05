@@ -3,7 +3,6 @@
 
 import uuid
 # import models.property_img
-# import uuid
 from models import storage
 from models.user import User
 # from models.property import Property
@@ -35,7 +34,12 @@ def property():
 @app.route("/buy", strict_slashes=False)
 def user():
     """List of all users"""
-    return render_template("buy.html", cache_id=uuid.uuid4())
+    users = storage.all(User).values()
+    users = sorted(users, key=lambda k: k.firstname)
+
+    return render_template("buy.html",
+                           users=users,
+                           cache_id=uuid.uuid4())
 
 @app.route("/details/<property_id>", strict_slashes=False)
 def single_property(property_id):

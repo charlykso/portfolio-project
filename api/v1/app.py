@@ -32,7 +32,7 @@ def not_found(error):
 
 app.config['SWAGGER'] = {
     'title': 'Authentified Restful API',
-    'uiversion': 3
+    'uiversion': 1
 }
 
 Swagger(app)

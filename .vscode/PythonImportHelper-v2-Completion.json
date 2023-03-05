@@ -17,75 +17,259 @@
         "documentation": {}
     },
     {
-        "label": "app_views",
-        "importPath": "api.v1.views",
-        "description": "api.v1.views",
+        "label": "storage",
+        "importPath": "models",
+        "description": "models",
         "isExtraImport": true,
-        "detail": "api.v1.views",
+        "detail": "models",
         "documentation": {}
     },
     {
-        "label": "environ",
-        "importPath": "os",
-        "description": "os",
+        "label": "storage",
+        "importPath": "models",
+        "description": "models",
         "isExtraImport": true,
-        "detail": "os",
+        "detail": "models",
         "documentation": {}
     },
     {
-        "label": "getenv",
-        "importPath": "os",
-        "description": "os",
+        "label": "storage",
+        "importPath": "models",
+        "description": "models",
         "isExtraImport": true,
-        "detail": "os",
+        "detail": "models",
         "documentation": {}
     },
     {
-        "label": "getenv",
-        "importPath": "os",
-        "description": "os",
+        "label": "storage",
+        "importPath": "models",
+        "description": "models",
         "isExtraImport": true,
-        "detail": "os",
+        "detail": "models",
         "documentation": {}
     },
     {
-        "label": "getenv",
-        "importPath": "os",
-        "description": "os",
+        "label": "storage",
+        "importPath": "models",
+        "description": "models",
         "isExtraImport": true,
-        "detail": "os",
+        "detail": "models",
         "documentation": {}
     },
     {
-        "label": "getenv",
-        "importPath": "os",
-        "description": "os",
+        "label": "storage",
+        "importPath": "models",
+        "description": "models",
         "isExtraImport": true,
-        "detail": "os",
+        "detail": "models",
         "documentation": {}
     },
     {
-        "label": "getenv",
-        "importPath": "os",
-        "description": "os",
+        "label": "storage",
+        "importPath": "models",
+        "description": "models",
         "isExtraImport": true,
-        "detail": "os",
+        "detail": "models",
         "documentation": {}
     },
     {
-        "label": "getenv",
-        "importPath": "os",
-        "description": "os",
+        "label": "User",
+        "importPath": "models.user",
+        "description": "models.user",
         "isExtraImport": true,
-        "detail": "os",
+        "detail": "models.user",
         "documentation": {}
     },
     {
-        "label": "getenv",
-        "importPath": "os",
-        "description": "os",
+        "label": "User",
+        "importPath": "models.user",
+        "description": "models.user",
         "isExtraImport": true,
-        "detail": "os",
+        "detail": "models.user",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models.user",
+        "description": "models.user",
+        "isExtraImport": true,
+        "detail": "models.user",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models.user",
+        "description": "models.user",
+        "isExtraImport": true,
+        "detail": "models.user",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models.user",
+        "description": "models.user",
+        "isExtraImport": true,
+        "detail": "models.user",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models.user",
+        "description": "models.user",
+        "isExtraImport": true,
+        "detail": "models.user",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models.user",
+        "description": "models.user",
+        "isExtraImport": true,
+        "detail": "models.user",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "abort",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "abort",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "abort",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "abort",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "abort",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "make_response",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
         "documentation": {}
     },
     {
@@ -137,35 +321,91 @@
         "documentation": {}
     },
     {
-        "label": "CORS",
-        "importPath": "flask_cors",
-        "description": "flask_cors",
+        "label": "Address",
+        "importPath": "models.address",
+        "description": "models.address",
         "isExtraImport": true,
-        "detail": "flask_cors",
+        "detail": "models.address",
         "documentation": {}
     },
     {
-        "label": "Swagger",
-        "importPath": "flasgger",
-        "description": "flasgger",
+        "label": "Address",
+        "importPath": "models.address",
+        "description": "models.address",
         "isExtraImport": true,
-        "detail": "flasgger",
+        "detail": "models.address",
         "documentation": {}
     },
     {
-        "label": "swag_from",
-        "importPath": "flasgger.utils",
-        "description": "flasgger.utils",
+        "label": "Address",
+        "importPath": "models.address",
+        "description": "models.address",
         "isExtraImport": true,
-        "detail": "flasgger.utils",
+        "detail": "models.address",
         "documentation": {}
     },
     {
-        "label": "User",
-        "importPath": "models.user",
-        "description": "models.user",
+        "label": "app_views",
+        "importPath": "api.v1.views",
+        "description": "api.v1.views",
         "isExtraImport": true,
-        "detail": "models.user",
+        "detail": "api.v1.views",
+        "documentation": {}
+    },
+    {
+        "label": "app_views",
+        "importPath": "api.v1.views",
+        "description": "api.v1.views",
+        "isExtraImport": true,
+        "detail": "api.v1.views",
+        "documentation": {}
+    },
+    {
+        "label": "app_views",
+        "importPath": "api.v1.views",
+        "description": "api.v1.views",
+        "isExtraImport": true,
+        "detail": "api.v1.views",
+        "documentation": {}
+    },
+    {
+        "label": "app_views",
+        "importPath": "api.v1.views",
+        "description": "api.v1.views",
+        "isExtraImport": true,
+        "detail": "api.v1.views",
+        "documentation": {}
+    },
+    {
+        "label": "app_views",
+        "importPath": "api.v1.views",
+        "description": "api.v1.views",
+        "isExtraImport": true,
+        "detail": "api.v1.views",
+        "documentation": {}
+    },
+    {
+        "label": "app_views",
+        "importPath": "api.v1.views",
+        "description": "api.v1.views",
+        "isExtraImport": true,
+        "detail": "api.v1.views",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "models.base_model",
+        "description": "models.base_model",
+        "isExtraImport": true,
+        "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "models.base_model",
+        "description": "models.base_model",
+        "isExtraImport": true,
+        "detail": "models.base_model",
         "documentation": {}
     },
     {
@@ -273,6 +513,54 @@
         "documentation": {}
     },
     {
+        "label": "Property",
+        "importPath": "models.property",
+        "description": "models.property",
+        "isExtraImport": true,
+        "detail": "models.property",
+        "documentation": {}
+    },
+    {
+        "label": "Property",
+        "importPath": "models.property",
+        "description": "models.property",
+        "isExtraImport": true,
+        "detail": "models.property",
+        "documentation": {}
+    },
+    {
+        "label": "Property",
+        "importPath": "models.property",
+        "description": "models.property",
+        "isExtraImport": true,
+        "detail": "models.property",
+        "documentation": {}
+    },
+    {
+        "label": "Review",
+        "importPath": "models.review",
+        "description": "models.review",
+        "isExtraImport": true,
+        "detail": "models.review",
+        "documentation": {}
+    },
+    {
+        "label": "Review",
+        "importPath": "models.review",
+        "description": "models.review",
+        "isExtraImport": true,
+        "detail": "models.review",
+        "documentation": {}
+    },
+    {
+        "label": "Review",
+        "importPath": "models.review",
+        "description": "models.review",
+        "isExtraImport": true,
+        "detail": "models.review",
+        "documentation": {}
+    },
+    {
         "label": "models.property_img",
         "kind": 6,
         "isExtraImport": true,
@@ -290,19 +578,116 @@
         "documentation": {}
     },
     {
-        "label": "Review",
-        "importPath": "models.review",
-        "description": "models.review",
+        "label": "Property_img",
+        "importPath": "models.property_img",
+        "description": "models.property_img",
         "isExtraImport": true,
-        "detail": "models.review",
+        "detail": "models.property_img",
         "documentation": {}
     },
     {
-        "label": "Address",
-        "importPath": "models.address",
-        "description": "models.address",
+        "label": "requests,",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "models.address",
+        "importPath": "requests.",
+        "description": "requests.",
+        "detail": "requests.",
+        "documentation": {}
+    },
+    {
+        "label": "checkUser",
+        "importPath": "api.v1.collectives",
+        "description": "api.v1.collectives",
+        "isExtraImport": true,
+        "detail": "api.v1.collectives",
+        "documentation": {}
+    },
+    {
+        "label": "environ",
+        "importPath": "os",
+        "description": "os",
+        "isExtraImport": true,
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "getenv",
+        "importPath": "os",
+        "description": "os",
+        "isExtraImport": true,
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "getenv",
+        "importPath": "os",
+        "description": "os",
+        "isExtraImport": true,
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "getenv",
+        "importPath": "os",
+        "description": "os",
+        "isExtraImport": true,
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "getenv",
+        "importPath": "os",
+        "description": "os",
+        "isExtraImport": true,
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "getenv",
+        "importPath": "os",
+        "description": "os",
+        "isExtraImport": true,
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "getenv",
+        "importPath": "os",
+        "description": "os",
+        "isExtraImport": true,
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "getenv",
+        "importPath": "os",
+        "description": "os",
+        "isExtraImport": true,
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "CORS",
+        "importPath": "flask_cors",
+        "description": "flask_cors",
+        "isExtraImport": true,
+        "detail": "flask_cors",
+        "documentation": {}
+    },
+    {
+        "label": "Swagger",
+        "importPath": "flasgger",
+        "description": "flasgger",
+        "isExtraImport": true,
+        "detail": "flasgger",
+        "documentation": {}
+    },
+    {
+        "label": "swag_from",
+        "importPath": "flasgger.utils",
+        "description": "flasgger.utils",
+        "isExtraImport": true,
+        "detail": "flasgger.utils",
         "documentation": {}
     },
     {
@@ -532,6 +917,204 @@
         "documentation": {}
     },
     {
+        "label": "get_user",
+        "kind": 2,
+        "importPath": "api.v1.collectives.checkUser",
+        "description": "api.v1.collectives.checkUser",
+        "peekOfCode": "def get_user(user_id):\n    \"\"\"to get user details\"\"\"\n    new_list = []\n    key = \"User.\" + str(user_id)\n    if user_id is None:\n        objs = storage.all(User)\n        for key, value in objs.items():\n            new_list.append(value.to_dict())\n    elif key in storage.all(User).keys():\n        return jsonify(storage.all(User)[key].to_dict())",
+        "detail": "api.v1.collectives.checkUser",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_addresses",
+        "kind": 2,
+        "importPath": "api.v1.views.addresses",
+        "description": "api.v1.views.addresses",
+        "peekOfCode": "def get_all_addresses(address_id=None):\n    \"\"\"\n    get all addresses\n    or get any address with the address_id that is passed\n    \"\"\"\n    new_list = []\n    key = \"Address.\" + str(address_id)\n    if address_id is None:\n        objs = storage.all(Address)\n        for key, value in objs.items():",
+        "detail": "api.v1.views.addresses",
+        "documentation": {}
+    },
+    {
+        "label": "delete_address",
+        "kind": 2,
+        "importPath": "api.v1.views.addresses",
+        "description": "api.v1.views.addresses",
+        "peekOfCode": "def delete_address(address_id=None):\n    \"\"\"\n    delete any address that the address_id is passed\n    \"\"\"\n    address = storage.get(Address, address_id)\n    if address is None:\n        abort(404)\n    address.delete()\n    storage.save()\n    return jsonify({}), 200",
+        "detail": "api.v1.views.addresses",
+        "documentation": {}
+    },
+    {
+        "label": "create_address",
+        "kind": 2,
+        "importPath": "api.v1.views.addresses",
+        "description": "api.v1.views.addresses",
+        "peekOfCode": "def create_address(user_id=None):\n    \"\"\"\n    create a new address for a user\n    by passing th user id\n    \"\"\"\n    if storage.get(User, user_id) is None:\n        abort(404)\n    if not request.get_json():\n        abort(400, \"Not a JSON\")\n    if \"country\" not in request.get_json():",
+        "detail": "api.v1.views.addresses",
+        "documentation": {}
+    },
+    {
+        "label": "update_address",
+        "kind": 2,
+        "importPath": "api.v1.views.addresses",
+        "description": "api.v1.views.addresses",
+        "peekOfCode": "def update_address(address_id=None):\n    \"\"\"\n    update any users address by passing the address id\n    \"\"\"\n    address = storage.get(Address, address_id)\n    if address is None:\n        abort(404)\n    key = \"Address.\" + str(address_id)\n    if key not in storage.all(Address).keys():\n        abort(404)",
+        "detail": "api.v1.views.addresses",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "kind": 2,
+        "importPath": "api.v1.views.index",
+        "description": "api.v1.views.index",
+        "peekOfCode": "def status():\n    \"\"\"API status\"\"\"\n    return jsonify({\"status\": \"OK\"})\n@app_views.route('/stats', methods=['GET'], strict_slashes=False)\ndef obj_count():\n    \"\"\"retrieve number of objects by type\"\"\"\n    obj_count = {}\n    for key, value in classes.items():\n        obj_count[key] = storage.count(value)\n    return jsonify(obj_count)",
+        "detail": "api.v1.views.index",
+        "documentation": {}
+    },
+    {
+        "label": "obj_count",
+        "kind": 2,
+        "importPath": "api.v1.views.index",
+        "description": "api.v1.views.index",
+        "peekOfCode": "def obj_count():\n    \"\"\"retrieve number of objects by type\"\"\"\n    obj_count = {}\n    for key, value in classes.items():\n        obj_count[key] = storage.count(value)\n    return jsonify(obj_count)\nif __name__ == '__main__':\n    pass",
+        "detail": "api.v1.views.index",
+        "documentation": {}
+    },
+    {
+        "label": "classes",
+        "kind": 5,
+        "importPath": "api.v1.views.index",
+        "description": "api.v1.views.index",
+        "peekOfCode": "classes = {\n           \"addresses\": Address,\n           \"properties\": Property,\n           \"reviews\": Review,\n           \"property_imgs\": Property_img,\n           \"users\": User,\n           }\n@app_views.route('/status', methods=['GET'], strict_slashes=False)\ndef status():\n    \"\"\"API status\"\"\"",
+        "detail": "api.v1.views.index",
+        "documentation": {}
+    },
+    {
+        "label": "get_reviews_for_a_property",
+        "kind": 2,
+        "importPath": "api.v1.views.property_reviews",
+        "description": "api.v1.views.property_reviews",
+        "peekOfCode": "def get_reviews_for_a_property(property_id=None):\n    \"\"\"\n    get all reviews that is associated to a property\n    \"\"\"\n    property = storage.get(Property, property_id)\n    if property is None:\n        abort(404)\n    new_list = []\n    for review in property.reviews:\n        new_list.append(review.to_dict())",
+        "detail": "api.v1.views.property_reviews",
+        "documentation": {}
+    },
+    {
+        "label": "get_review",
+        "kind": 2,
+        "importPath": "api.v1.views.property_reviews",
+        "description": "api.v1.views.property_reviews",
+        "peekOfCode": "def get_review(review_id=None):\n    \"\"\"\n    retrieve one review\n    \"\"\"\n    review = storage.get(Review, review_id)\n    if review is None:\n        abort(404)\n    return jsonify(review.to_dict())\n@app_views.route(\"/reviews/<review_id>\", methods=['DELETE'],\n                 strict_slashes=False)",
+        "detail": "api.v1.views.property_reviews",
+        "documentation": {}
+    },
+    {
+        "label": "delete_review",
+        "kind": 2,
+        "importPath": "api.v1.views.property_reviews",
+        "description": "api.v1.views.property_reviews",
+        "peekOfCode": "def delete_review(review_id=None):\n    \"\"\"\n    delete a review that the id was passed\n    \"\"\"\n    review = storage.get(Review, review_id)\n    if review is None:\n        abort(404)\n    review.delete()\n    storage.save()\n    return jsonify({}), 200",
+        "detail": "api.v1.views.property_reviews",
+        "documentation": {}
+    },
+    {
+        "label": "create_review",
+        "kind": 2,
+        "importPath": "api.v1.views.property_reviews",
+        "description": "api.v1.views.property_reviews",
+        "peekOfCode": "def create_review(property_id=None):\n    \"\"\"\n    create a review for a property\n    by using the property_id to select the property\n    \"\"\"\n    if storage.get(Property, property_id) is None:\n        abort(404)\n    if not request.get_json():\n        abort(400, \"Not a JSON\")\n    if \"property_id\" not in request.get_json():",
+        "detail": "api.v1.views.property_reviews",
+        "documentation": {}
+    },
+    {
+        "label": "update_review",
+        "kind": 2,
+        "importPath": "api.v1.views.property_reviews",
+        "description": "api.v1.views.property_reviews",
+        "peekOfCode": "def update_review(review_id=None):\n    \"\"\"\n    update a review\n    by passing the review_id\n    \"\"\"\n    key = \"Review.\" + str(review_id)\n    if key not in storage.all(Review).keys():\n        abort(404)\n    review = storage.get(Review, review_id)\n    if review is None:",
+        "detail": "api.v1.views.property_reviews",
+        "documentation": {}
+    },
+    {
+        "label": "get_properties_for_a_user",
+        "kind": 2,
+        "importPath": "api.v1.views.user_properties",
+        "description": "api.v1.views.user_properties",
+        "peekOfCode": "def get_properties_for_a_user(user_id=None):\n    \"\"\"\n    get all properties that is associated to a user\n    \"\"\"\n    user = storage.get(User, user_id)\n    if user is None:\n        abort(404)\n    new_list = []\n    for property in user.properties:\n        new_list.append(property.to_dict())",
+        "detail": "api.v1.views.user_properties",
+        "documentation": {}
+    },
+    {
+        "label": "get_property",
+        "kind": 2,
+        "importPath": "api.v1.views.user_properties",
+        "description": "api.v1.views.user_properties",
+        "peekOfCode": "def get_property(property_id=None):\n    \"\"\"\n    retrieve one or all properties\n    \"\"\"\n    new_list = []\n    key = \"Property.\" + str(property_id)\n    if property_id is None:\n        objs = storage.all(Property)\n        for key, value in objs.items():\n            new_list.append(value.to_dict())",
+        "detail": "api.v1.views.user_properties",
+        "documentation": {}
+    },
+    {
+        "label": "delete_property",
+        "kind": 2,
+        "importPath": "api.v1.views.user_properties",
+        "description": "api.v1.views.user_properties",
+        "peekOfCode": "def delete_property(property_id=None):\n    \"\"\"\n    delete a property that the id was passed\n    \"\"\"\n    property = storage.get(Property, property_id)\n    if property is None:\n        abort(404)\n    property.delete()\n    storage.save()\n    return jsonify({}), 200",
+        "detail": "api.v1.views.user_properties",
+        "documentation": {}
+    },
+    {
+        "label": "create_property",
+        "kind": 2,
+        "importPath": "api.v1.views.user_properties",
+        "description": "api.v1.views.user_properties",
+        "peekOfCode": "def create_property(user_id=None):\n    \"\"\"\n    create a property for a user\n    by using the user_id to select the user\n    \"\"\"\n    propertyUrl = \"http://0.0.0.0:5004/api/v1/properties/\"\n    userUrl = \"http://127.0.0.1:5004/api/v1/users/\"\n    if storage.get(User, user_id) is None:\n        abort(404)\n    if not request.get_json():",
+        "detail": "api.v1.views.user_properties",
+        "documentation": {}
+    },
+    {
+        "label": "update_property",
+        "kind": 2,
+        "importPath": "api.v1.views.user_properties",
+        "description": "api.v1.views.user_properties",
+        "peekOfCode": "def update_property(property_id=None):\n    \"\"\"\n    update a property\n    by passing the property_id\n    \"\"\"\n    key = \"Property.\" + str(property_id)\n    if key not in storage.all(Property).keys():\n        abort(404)\n    property = storage.get(Property, property_id)\n    if property is None:",
+        "detail": "api.v1.views.user_properties",
+        "documentation": {}
+    },
+    {
+        "label": "get_users",
+        "kind": 2,
+        "importPath": "api.v1.views.users",
+        "description": "api.v1.views.users",
+        "peekOfCode": "def get_users(user_id=None):\n    \"\"\"\n    get all users\n    or get any user with the user_id that is passed\n    \"\"\"\n    new_list = []\n    key = \"User.\" + str(user_id)\n    if user_id is None:\n        objs = storage.all(User)\n        for key, value in objs.items():",
+        "detail": "api.v1.views.users",
+        "documentation": {}
+    },
+    {
+        "label": "delete_user",
+        "kind": 2,
+        "importPath": "api.v1.views.users",
+        "description": "api.v1.views.users",
+        "peekOfCode": "def delete_user(user_id=None):\n    \"\"\"\n    delete any user that the user_id is passed\n    \"\"\"\n    user = storage.get(User, user_id)\n    if user is None:\n        abort(404)\n    user.delete()\n    storage.save()\n    return jsonify({}), 200",
+        "detail": "api.v1.views.users",
+        "documentation": {}
+    },
+    {
+        "label": "create_user",
+        "kind": 2,
+        "importPath": "api.v1.views.users",
+        "description": "api.v1.views.users",
+        "peekOfCode": "def create_user():\n    \"\"\"\n    create a new user\n    \"\"\"\n    if not request.get_json():\n        abort(400, \"Not a JSON\")\n    if \"email\" not in request.get_json():\n        abort(400, \"Missing email\")\n    if \"firstname\" not in request.get_json():\n        abort(400, \"Missing firstname\")",
+        "detail": "api.v1.views.users",
+        "documentation": {}
+    },
+    {
+        "label": "update_user",
+        "kind": 2,
+        "importPath": "api.v1.views.users",
+        "description": "api.v1.views.users",
+        "peekOfCode": "def update_user(user_id=None):\n    \"\"\"\n    update any user the id is passed\n    \"\"\"\n    user = storage.get(User, user_id)\n    if user is None:\n        abort(404)\n    key = \"User.\" + str(user_id)\n    if key not in storage.all(User).keys():\n        abort(404)",
+        "detail": "api.v1.views.users",
+        "documentation": {}
+    },
+    {
         "label": "close_db",
         "kind": 2,
         "importPath": "api.v1.app",
@@ -581,7 +1164,7 @@
         "kind": 5,
         "importPath": "api.v1.app",
         "description": "api.v1.app",
-        "peekOfCode": "app.config['SWAGGER'] = {\n    'title': 'Authentified Restful API',\n    'uiversion': 3\n}\nSwagger(app)\nif __name__ == \"__main__\":\n    \"\"\" Main Function \"\"\"\n    host = environ.get('HBNB_API_HOST')\n    port = environ.get('HBNB_API_PORT')\n    if not host:",
+        "peekOfCode": "app.config['SWAGGER'] = {\n    'title': 'Authentified Restful API',\n    'uiversion': 1\n}\nSwagger(app)\nif __name__ == \"__main__\":\n    \"\"\" Main Function \"\"\"\n    host = environ.get('AUTH_API_HOST')\n    port = environ.get('AUTH_API_PORT')\n    if not host:",
         "detail": "api.v1.app",
         "documentation": {}
     },
@@ -608,7 +1191,7 @@
         "kind": 6,
         "importPath": "models.address",
         "description": "models.address",
-        "peekOfCode": "class Address(BaseModel, Base):\n    \"\"\"Representation of Address \"\"\"\n    __tablename__ = 'addresses'\n    country = Column(String(128), nullable=False)\n    state = Column(String(128), nullable=False)\n    city = Column(String(128), nullable=False)\n    street = Column(String(128), nullable=False)\n    landmark = Column(String(128), nullable=False)\n    user_id = Column(String(60), ForeignKey('users.id'), nullable=False)\n    text = Column(String(1024), nullable=False)",
+        "peekOfCode": "class Address(BaseModel, Base):\n    \"\"\"Representation of Address \"\"\"\n    __tablename__ = 'addresses'\n    country = Column(String(128), nullable=False)\n    state = Column(String(128), nullable=False)\n    city = Column(String(128), nullable=False)\n    street = Column(String(128), nullable=False)\n    landmark = Column(String(128), nullable=False)\n    user_id = Column(String(60), ForeignKey('users.id'), nullable=False)\n    def __init__(self, *args, **kwargs):",
         "detail": "models.address",
         "documentation": {}
     },
@@ -676,21 +1259,57 @@
         "documentation": {}
     },
     {
+        "label": "close_db",
+        "kind": 2,
+        "importPath": "web_dynamic.app",
+        "description": "web_dynamic.app",
+        "peekOfCode": "def close_db(error):\n    \"\"\"Remove the current sqlalchemy session\"\"\"\n    storage.close()\n@app.route(\"/\", strict_slashes=False)\ndef index():\n    \"\"\"landing page\"\"\"\n    return render_template(\"index.html\", cache_id=uuid.uuid4)\n@app.route(\"/properties\", strict_slashes=False)\ndef property():\n    \"\"\"List all the users\"\"\"",
+        "detail": "web_dynamic.app",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "web_dynamic.app",
+        "description": "web_dynamic.app",
+        "peekOfCode": "def index():\n    \"\"\"landing page\"\"\"\n    return render_template(\"index.html\", cache_id=uuid.uuid4)\n@app.route(\"/properties\", strict_slashes=False)\ndef property():\n    \"\"\"List all the users\"\"\"\n    return render_template(\"testbase.html\",\n                           cache_id=uuid.uuid4())\n@app.route(\"/buy\", strict_slashes=False)\ndef user():",
+        "detail": "web_dynamic.app",
+        "documentation": {}
+    },
+    {
         "label": "property",
         "kind": 2,
-        "importPath": "web_dynamic.buy",
-        "description": "web_dynamic.buy",
-        "peekOfCode": "def property():\n    \"\"\"List all the users\"\"\"\n    return render_template(\"testbase.html\")\nif __name__ == \"__main__\":\n    \"\"\" Main Function \"\"\"\n    app.run(host='0.0.0.0', port=5002, debug=True)",
-        "detail": "web_dynamic.buy",
+        "importPath": "web_dynamic.app",
+        "description": "web_dynamic.app",
+        "peekOfCode": "def property():\n    \"\"\"List all the users\"\"\"\n    return render_template(\"testbase.html\",\n                           cache_id=uuid.uuid4())\n@app.route(\"/buy\", strict_slashes=False)\ndef user():\n    \"\"\"List of all users\"\"\"\n    users = storage.all(User).values()\n    users = sorted(users, key=lambda k: k.firstname)\n    return render_template(\"buy.html\",",
+        "detail": "web_dynamic.app",
+        "documentation": {}
+    },
+    {
+        "label": "user",
+        "kind": 2,
+        "importPath": "web_dynamic.app",
+        "description": "web_dynamic.app",
+        "peekOfCode": "def user():\n    \"\"\"List of all users\"\"\"\n    users = storage.all(User).values()\n    users = sorted(users, key=lambda k: k.firstname)\n    return render_template(\"buy.html\",\n                           users=users,\n                           cache_id=uuid.uuid4())\n@app.route(\"/details/<property_id>\", strict_slashes=False)\ndef single_property(property_id):\n    \"\"\"Get the details of one property\"\"\"",
+        "detail": "web_dynamic.app",
+        "documentation": {}
+    },
+    {
+        "label": "single_property",
+        "kind": 2,
+        "importPath": "web_dynamic.app",
+        "description": "web_dynamic.app",
+        "peekOfCode": "def single_property(property_id):\n    \"\"\"Get the details of one property\"\"\"\n    return render_template(\"details.html\", cache_id=uuid.uuid4)\nif __name__ == \"__main__\":\n    \"\"\" Main Function \"\"\"\n    app.run(host='0.0.0.0', port=5002, debug=True)",
+        "detail": "web_dynamic.app",
         "documentation": {}
     },
     {
         "label": "app",
         "kind": 5,
-        "importPath": "web_dynamic.buy",
-        "description": "web_dynamic.buy",
-        "peekOfCode": "app = Flask(__name__)\n# @app.teardown_appcontext\n# def close_db(error):\n#     \"\"\"Remove the current sqlalchemy session\"\"\"\n#     storage.close()\n@app.route(\"/properties\", strict_slashes=False)\ndef property():\n    \"\"\"List all the users\"\"\"\n    return render_template(\"testbase.html\")\nif __name__ == \"__main__\":",
-        "detail": "web_dynamic.buy",
+        "importPath": "web_dynamic.app",
+        "description": "web_dynamic.app",
+        "peekOfCode": "app = Flask(__name__)\n@app.teardown_appcontext\ndef close_db(error):\n    \"\"\"Remove the current sqlalchemy session\"\"\"\n    storage.close()\n@app.route(\"/\", strict_slashes=False)\ndef index():\n    \"\"\"landing page\"\"\"\n    return render_template(\"index.html\", cache_id=uuid.uuid4)\n@app.route(\"/properties\", strict_slashes=False)",
+        "detail": "web_dynamic.app",
         "documentation": {}
     }
 ]

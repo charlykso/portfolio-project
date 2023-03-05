@@ -31,7 +31,7 @@ CREATE TABLE `addresses` (
   `landmark` varchar(128) NOT NULL,
   `user_id` varchar(60) NOT NULL,
   `created_at` datetime DEFAULT NULL,
-  `update_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
   CONSTRAINT `addresses_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
@@ -63,9 +63,9 @@ CREATE TABLE `properties` (
   `state` varchar(128) NOT NULL,
   `user_id` varchar(60) NOT NULL,
   `created_at` datetime DEFAULT NULL,
-  `update_at` datetime DEFAULT NULL,
   `availability` varchar(20) NOT NULL,
   `landmark` varchar(200) DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
   CONSTRAINT `properties_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
@@ -93,7 +93,7 @@ CREATE TABLE `property_imgs` (
   `property_id` varchar(60) NOT NULL,
   `img_path` varchar(255) NOT NULL,
   `created_at` datetime DEFAULT NULL,
-  `update_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `property_id` (`property_id`),
   CONSTRAINT `property_imgs_ibfk_1` FOREIGN KEY (`property_id`) REFERENCES `properties` (`id`)
@@ -153,7 +153,8 @@ CREATE TABLE `users` (
   `gender` varchar(10) NOT NULL,
   `phone_no` varchar(20) NOT NULL,
   `created_at` datetime DEFAULT NULL,
-  `update_at` datetime DEFAULT NULL,
+  `password` varchar(200) NOT NULL,
+  `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -164,6 +165,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES ('24cc9bb4-c07a-4fcb-ba0d-f51903176687','Alena','Ugwu','alena@gmail.com','Female','+2347066635434','2023-03-04 11:13:37','91747173044331af4848d72162bbb8f8','2023-03-04 11:13:37'),('99b8367b-5903-4e12-980d-4113d828095e','Ikenna','Eze','ikenna@gmail.com','Male','+2347065635434','2023-03-04 11:11:55','91747173044331af4848d72162bbb8f8','2023-03-04 11:11:55');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -176,4 +178,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-02-24  0:53:50
+-- Dump completed on 2023-03-04 17:19:48

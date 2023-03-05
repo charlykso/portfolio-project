@@ -11,7 +11,6 @@ from models.property_img import Property_img
 from models.review import Review
 from models.address import Address
 from os import getenv
-import sqlalchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 
