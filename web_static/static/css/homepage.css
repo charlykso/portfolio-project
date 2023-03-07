@@ -1,0 +1,55 @@
+.baner{
+	width: 100%;
+	height: 500px;
+	background-image: url('https://lh3.googleusercontent.com/91yrUqzVT87LiGb2pWfvjbOpnL4TzQ8c2Sp9HgYkUqOvnK_avZcMdTZ4eRwcdgFqV6LYGt6JCoYa6qxk6EZn791-dwlXlHqhCVm16iMgo0uNa65L4ZUXqEP_6IoPqbnI8sxCrooXGQ=w2400');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+  
+.baner .first{
+	text-align: center;
+	width: 85%;
+}
+  
+.baner .first h1{
+	color: #020347;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 70px;
+}
+.baner h2{
+  color: #FF0000;
+  font-family: Arial, Helvetica, sans-serif;
+	font-size: 40px;
+  
+}
+.slider{
+margin: 0;
+padding: 0;
+box-sizing: border-box; 
+}
+
+.slider{
+width: 100%;
+height: 100vh;
+background: none;
+display: fle;
+align-content: center;
+justify-content: center;
+}
+.swiper{
+  width: 80%;
+  height: fit-content;
+}
+.swiper-slide img{
+  width: 100%;
+}
+.swiper .swiper-button-prev, .swiper .swiper-button-next{
+  color: #020347;
+}
+.swiper .swiper-pagination-bullet-active{
+  background: #020347;
+}
