@@ -2,6 +2,8 @@
 """This is for the buy page"""
 
 import uuid
+from hashlib import md5
+import json, requests
 # import models.property_img
 from models import storage
 from models.user import User
@@ -9,10 +11,14 @@ from models.user import User
 # from models.property_img import Property_img
 # from models.address import Address
 # from os import environ
-from flask import Flask, render_template
+from flask import Flask, request, render_template,\
+    redirect, url_for, session
+from web_dynamic.collective.checkEmail import CheckEmail
 # from api.v1.app import close_db
 
+
 app = Flask(__name__)
+app.secret_key = 'ABCabcDEFdef123456'
 
 @app.teardown_appcontext
 def close_db(error):
@@ -24,6 +30,95 @@ def close_db(error):
 def index():
     """landing page"""
     return render_template("index.html", cache_id=uuid.uuid4)
+
+
+@app.route("/signup", methods=['GET', 'POST'], strict_slashes=False)
+def signup():
+    """signup page"""
+    msg=""
+    if request.method == 'POST':
+        
+        firstname = request.form['firstname']
+        lastname = request.form['lastname']
+        email = request.form['email']
+        phone_no = request.form['phone_no']
+        gender = request.form['gender']
+        password = request.form['password']
+        confirm_password = request.form['confirm_password']
+
+        if not lastname or not firstname or\
+            not email or not password or\
+                not confirm_password or not phone_no\
+                    or not gender:
+            msg = "Please fill all required detail"
+            return render_template("signup.html", msg=msg)
+        elif len(password) < 6:
+            msg = "Password must me be greater 5"
+            return render_template("signup.html", msg=msg)
+        elif password != confirm_password:
+            msg = "Password did not match"
+            return render_template("signup.html", msg=msg)
+        elif CheckEmail.emailExists(email):
+            msg = "Email already exist"
+            return render_template("signup.html", msg=msg)
+
+        url = "http://127.0.0.1:5003/api/v1/users"
+        res = requests.post(url, json = {
+            "firstname": firstname,\
+                "lastname": lastname,\
+                "phone_no": phone_no,\
+                "email": email,\
+                "password": password,\
+                "gender": gender
+        })
+        if res.status_code != 201:
+            msg= res.status_code
+            return render_template("signup.html", msg=msg)
+
+        session['loggedin'] = True
+        session['id'] = res.json()['id']
+        session['firstname'] = res.json()['firstname']
+        session['lastname'] = res.json()['lastname']
+        session['email'] = res.json()['email']
+        session['cache_id'] = uuid.uuid4()
+        msg = 'Logged in successfully !'
+        print(res.json()['id'])   
+        return redirect(url_for("index", 
+                                msg=msg,
+                                cache_id=uuid.uuid4()
+                                ))
+
+    msg = "Method not accepted"
+    return render_template("signup.html", msg=msg)
+
+
+@app.route("/login", methods=['GET', 'POST'], strict_slashes=False)
+def login():
+    """login page"""
+    msg=""
+    email = request.form.get('email')
+    password = request.form.get('password')
+    if request.method == "POST":
+        if not email or not password:
+            msg = "Please fill in correctly"
+            return render_template('login.html', msg=msg)
+        users = storage.all(User)
+        for value in users.values():
+            if email == value.email and\
+                value.password == md5(password.encode()).hexdigest():
+                session['loggedin'] = True
+                session['id'] = value.id
+                session['firstname'] = value.firstname
+                session['lastname'] = value.lastname
+                session['email'] = email
+                session['cache_id'] = uuid.uuid4()
+                msg = 'Logged in successfully !'
+
+                return render_template("index.html", msg=msg)
+
+        msg = "Incorrect email or password"
+    return render_template("login.html", msg=msg)
+
 
 @app.route("/properties", strict_slashes=False)
 def property():
@@ -45,6 +140,18 @@ def user():
 def single_property(property_id):
     """Get the details of one property"""
     return render_template("details.html", cache_id=uuid.uuid4)
+
+
+@app.route('/logout')
+def logout():
+    session.pop('loggedin', None)
+    session.pop('id', None)
+    session.pop('firstname', None)
+    session.pop('lastname', None)
+    session.pop('email', None)
+    session.pop('cache_id', None)
+    return redirect(url_for('login'))
+
 
 if __name__ == "__main__":
     """ Main Function """

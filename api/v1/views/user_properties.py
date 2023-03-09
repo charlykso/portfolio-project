@@ -68,16 +68,14 @@ def create_property(user_id=None):
     create a property for a user
     by using the user_id to select the user
     """
-    propertyUrl = "http://0.0.0.0:5004/api/v1/properties/"
-    userUrl = "http://127.0.0.1:5004/api/v1/users/"
+    propertyUrl = "http://0.0.0.0:5004/api/v1/property/"
+    userUrl = "http://127.0.0.1:5004/api/v1/owners/"
     if storage.get(User, user_id) is None:
         abort(404)
     if not request.get_json():
         abort(400, "Not a JSON")
-    if "user_id" not in request.get_json():
-        abort(400, "Missing user_id")
     if storage.get(User, request.get_json()["user_id"]) is None:
-        abort(404)
+        abort(400, "Missing user_id")
     if "state" not in request.get_json():
         abort(400, "Missing state")
     if "status" not in request.get_json():
@@ -91,28 +89,37 @@ def create_property(user_id=None):
     if "type" not in request.get_json():
         abort(400, "Missing type")
     if "gen_property_id" not in request.get_json():
-        abort(400, "Missing the property id from the general property db")
-    search_term = request.get_json()['state'].upper()
-    +" "+ request.get_json()['landmark'].upper()
-    +" "+ request.get_json()['status'].upper()
-    +" "+ request.get_json()['state'].upper()
-    +" "+ request.get_json()['type'].upper()
+        abort(400, "Missing the property id")
+    search_term = request.get_json()['status'].upper()\
+        +" "+request.get_json()['state'].upper()\
+            +" "+request.get_json()['type'].upper()
 
+    """query the central system endpoint to check if the property exists"""
     propertyRes = requests.get(
-        propertyUrl + request.get_json()['gen_property_id'])
+        propertyUrl +request.get_json()['gen_property_id'])
+    # print(propertyRes.json())
+
+    if propertyRes.status_code != 200:
+        abort(400, "No corresponding property found in the central database")
     propertyData = propertyRes.json()
 
+    """query the central system to check the property owner"""
     userRes = requests.get(
-        userUrl + propertyData['user_id']
+        userUrl +propertyData
     )
-    userData = userRes.json()
+    # print(userRes.json())
+    ownerData = userRes.json()
+    print(ownerData['id'])
 
-    userInfo = checkUser(userData['user_id'])
-    
+    """getting the user info to cross check the owner of the property"""
+    userInfo = checkUser.get_user(User, request.get_json()['user_id'])
+    # print(userInfo)
+
+    """comparing the property owner and auth user"""
     if userInfo['firstname'].lower() == \
-        request.get_json()['firstname'].lower() and \
+        ownerData['firstname'].lower() and \
         userInfo['lastname'].lower() == \
-            request.get_json()['lastname'].lower():
+            ownerData['lastname'].lower():
       property = Property(**request.get_json())
       property.search_term = search_term
       property.user_id = user_id

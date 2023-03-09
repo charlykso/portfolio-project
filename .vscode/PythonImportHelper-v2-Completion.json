@@ -73,75 +73,11 @@
         "documentation": {}
     },
     {
-        "label": "User",
-        "importPath": "models.user",
-        "description": "models.user",
+        "label": "storage",
+        "importPath": "models",
+        "description": "models",
         "isExtraImport": true,
-        "detail": "models.user",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "models.user",
-        "description": "models.user",
-        "isExtraImport": true,
-        "detail": "models.user",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "models.user",
-        "description": "models.user",
-        "isExtraImport": true,
-        "detail": "models.user",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "models.user",
-        "description": "models.user",
-        "isExtraImport": true,
-        "detail": "models.user",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "models.user",
-        "description": "models.user",
-        "isExtraImport": true,
-        "detail": "models.user",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "models.user",
-        "description": "models.user",
-        "isExtraImport": true,
-        "detail": "models.user",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "models.user",
-        "description": "models.user",
-        "isExtraImport": true,
-        "detail": "models.user",
-        "documentation": {}
-    },
-    {
-        "label": "Flask",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "jsonify",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
+        "detail": "models",
         "documentation": {}
     },
     {
@@ -178,6 +114,30 @@
     },
     {
         "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "abort",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
         "importPath": "flask",
         "description": "flask",
         "isExtraImport": true,
@@ -313,7 +273,39 @@
         "documentation": {}
     },
     {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
         "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "abort",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
         "importPath": "flask",
         "description": "flask",
         "isExtraImport": true,
@@ -345,11 +337,51 @@
         "documentation": {}
     },
     {
-        "label": "app_views",
-        "importPath": "api.v1.views",
-        "description": "api.v1.views",
+        "label": "User",
+        "importPath": "models.user",
+        "description": "models.user",
         "isExtraImport": true,
-        "detail": "api.v1.views",
+        "detail": "models.user",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models.user",
+        "description": "models.user",
+        "isExtraImport": true,
+        "detail": "models.user",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models.user",
+        "description": "models.user",
+        "isExtraImport": true,
+        "detail": "models.user",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models.user",
+        "description": "models.user",
+        "isExtraImport": true,
+        "detail": "models.user",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models.user",
+        "description": "models.user",
+        "isExtraImport": true,
+        "detail": "models.user",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models.user",
+        "description": "models.user",
+        "isExtraImport": true,
+        "detail": "models.user",
         "documentation": {}
     },
     {
@@ -393,35 +425,19 @@
         "documentation": {}
     },
     {
-        "label": "BaseModel",
-        "importPath": "models.base_model",
-        "description": "models.base_model",
+        "label": "app_views",
+        "importPath": "api.v1.views",
+        "description": "api.v1.views",
         "isExtraImport": true,
-        "detail": "models.base_model",
+        "detail": "api.v1.views",
         "documentation": {}
     },
     {
-        "label": "Base",
-        "importPath": "models.base_model",
-        "description": "models.base_model",
+        "label": "app_views",
+        "importPath": "api.v1.views",
+        "description": "api.v1.views",
         "isExtraImport": true,
-        "detail": "models.base_model",
-        "documentation": {}
-    },
-    {
-        "label": "BaseModel",
-        "importPath": "models.base_model",
-        "description": "models.base_model",
-        "isExtraImport": true,
-        "detail": "models.base_model",
-        "documentation": {}
-    },
-    {
-        "label": "Base",
-        "importPath": "models.base_model",
-        "description": "models.base_model",
-        "isExtraImport": true,
-        "detail": "models.base_model",
+        "detail": "api.v1.views",
         "documentation": {}
     },
     {
@@ -502,6 +518,46 @@
         "description": "models.base_model",
         "isExtraImport": true,
         "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "models.base_model",
+        "description": "models.base_model",
+        "isExtraImport": true,
+        "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "models.base_model",
+        "description": "models.base_model",
+        "isExtraImport": true,
+        "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "models.base_model",
+        "description": "models.base_model",
+        "isExtraImport": true,
+        "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "models.base_model",
+        "description": "models.base_model",
+        "isExtraImport": true,
+        "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "Property",
+        "importPath": "models.property",
+        "description": "models.property",
+        "isExtraImport": true,
+        "detail": "models.property",
         "documentation": {}
     },
     {
@@ -566,6 +622,14 @@
         "isExtraImport": true,
         "importPath": "models.property_img",
         "description": "models.property_img",
+        "detail": "models.property_img",
+        "documentation": {}
+    },
+    {
+        "label": "Property_img",
+        "importPath": "models.property_img",
+        "description": "models.property_img",
+        "isExtraImport": true,
         "detail": "models.property_img",
         "documentation": {}
     },
@@ -921,8 +985,17 @@
         "kind": 2,
         "importPath": "api.v1.collectives.checkUser",
         "description": "api.v1.collectives.checkUser",
-        "peekOfCode": "def get_user(user_id):\n    \"\"\"to get user details\"\"\"\n    new_list = []\n    key = \"User.\" + str(user_id)\n    if user_id is None:\n        objs = storage.all(User)\n        for key, value in objs.items():\n            new_list.append(value.to_dict())\n    elif key in storage.all(User).keys():\n        return jsonify(storage.all(User)[key].to_dict())",
+        "peekOfCode": "def get_user(cls, user_id):\n    \"\"\"to get user details\"\"\"\n    new_list = []\n    key = \"User.\" + str(user_id)\n    if user_id is None:\n        abort(400, \"Missing user id\")\n    elif key in storage.all(cls).keys():\n        return storage.all(cls)[key].to_dict()\n    else:\n        abort(404)",
         "detail": "api.v1.collectives.checkUser",
+        "documentation": {}
+    },
+    {
+        "label": "get_address_for_a_user",
+        "kind": 2,
+        "importPath": "api.v1.views.addresses",
+        "description": "api.v1.views.addresses",
+        "peekOfCode": "def get_address_for_a_user(user_id=None):\n    \"\"\"\n    get a address that is associated to a user\n    \"\"\"\n    user = storage.get(User, user_id)\n    if user is None:\n        abort(404)\n    new_list = []\n    for address in user.addresses:\n        new_list.append(address.to_dict())",
+        "detail": "api.v1.views.addresses",
         "documentation": {}
     },
     {
@@ -986,6 +1059,51 @@
         "description": "api.v1.views.index",
         "peekOfCode": "classes = {\n           \"addresses\": Address,\n           \"properties\": Property,\n           \"reviews\": Review,\n           \"property_imgs\": Property_img,\n           \"users\": User,\n           }\n@app_views.route('/status', methods=['GET'], strict_slashes=False)\ndef status():\n    \"\"\"API status\"\"\"",
         "detail": "api.v1.views.index",
+        "documentation": {}
+    },
+    {
+        "label": "get_images_for_a_property",
+        "kind": 2,
+        "importPath": "api.v1.views.property_imgs",
+        "description": "api.v1.views.property_imgs",
+        "peekOfCode": "def get_images_for_a_property(property_id=None):\n    \"\"\"\n    get all images for a property\n    \"\"\"\n    new_list = []\n    property = storage.get(Property, property_id)\n    if property is None:\n        abort(404)\n    for image in property.property_imgs:\n        new_list.append(image.to_dict())",
+        "detail": "api.v1.views.property_imgs",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_images",
+        "kind": 2,
+        "importPath": "api.v1.views.property_imgs",
+        "description": "api.v1.views.property_imgs",
+        "peekOfCode": "def get_all_images(image_id=None):\n    \"\"\"\n    get all images\n    or get any image with the propertyImg_id that is passed\n    \"\"\"\n    new_list = []\n    key = \"Property_img.\" + str(image_id)\n    if image_id is None:\n        objs = storage.all(Property_img)\n        for key, value in objs.items():",
+        "detail": "api.v1.views.property_imgs",
+        "documentation": {}
+    },
+    {
+        "label": "delete_image",
+        "kind": 2,
+        "importPath": "api.v1.views.property_imgs",
+        "description": "api.v1.views.property_imgs",
+        "peekOfCode": "def delete_image(image_id=None):\n    \"\"\"\n    delete any image by passing the propertyImg_id\n    \"\"\"\n    image = storage.get(Property_img, image_id)\n    if image is None:\n        abort(404)\n    image.delete()\n    storage.save()\n    return jsonify({}), 200",
+        "detail": "api.v1.views.property_imgs",
+        "documentation": {}
+    },
+    {
+        "label": "create_image",
+        "kind": 2,
+        "importPath": "api.v1.views.property_imgs",
+        "description": "api.v1.views.property_imgs",
+        "peekOfCode": "def create_image(property_id=None):\n    \"\"\"\n    create a new image for a property\n    by passing the property id\n    \"\"\"\n    if storage.get(Property, request.get_json()[\"property_id\"]) is None:\n        abort(404)\n    if not request.get_json():\n        abort(400, \"Not a JSON\")\n    if \"img_path\" not in request.get_json():",
+        "detail": "api.v1.views.property_imgs",
+        "documentation": {}
+    },
+    {
+        "label": "update_images",
+        "kind": 2,
+        "importPath": "api.v1.views.property_imgs",
+        "description": "api.v1.views.property_imgs",
+        "peekOfCode": "def update_images(image_id=None):\n    \"\"\"\n    update any image by passing the property_img id\n    \"\"\"\n    image = storage.get(Property_img, image_id)\n    if image is None:\n        abort(404)\n    key = \"Property_img.\" + str(image_id)\n    if key not in storage.all(Property_img).keys():\n        abort(404)",
+        "detail": "api.v1.views.property_imgs",
         "documentation": {}
     },
     {
@@ -1065,7 +1183,7 @@
         "kind": 2,
         "importPath": "api.v1.views.user_properties",
         "description": "api.v1.views.user_properties",
-        "peekOfCode": "def create_property(user_id=None):\n    \"\"\"\n    create a property for a user\n    by using the user_id to select the user\n    \"\"\"\n    propertyUrl = \"http://0.0.0.0:5004/api/v1/properties/\"\n    userUrl = \"http://127.0.0.1:5004/api/v1/users/\"\n    if storage.get(User, user_id) is None:\n        abort(404)\n    if not request.get_json():",
+        "peekOfCode": "def create_property(user_id=None):\n    \"\"\"\n    create a property for a user\n    by using the user_id to select the user\n    \"\"\"\n    propertyUrl = \"http://0.0.0.0:5004/api/v1/property/\"\n    userUrl = \"http://127.0.0.1:5004/api/v1/owners/\"\n    if storage.get(User, user_id) is None:\n        abort(404)\n    if not request.get_json():",
         "detail": "api.v1.views.user_properties",
         "documentation": {}
     },
@@ -1263,7 +1381,7 @@
         "kind": 2,
         "importPath": "web_dynamic.app",
         "description": "web_dynamic.app",
-        "peekOfCode": "def close_db(error):\n    \"\"\"Remove the current sqlalchemy session\"\"\"\n    storage.close()\n@app.route(\"/\", strict_slashes=False)\ndef index():\n    \"\"\"landing page\"\"\"\n    return render_template(\"index.html\", cache_id=uuid.uuid4)\n@app.route(\"/properties\", strict_slashes=False)\ndef property():\n    \"\"\"List all the users\"\"\"",
+        "peekOfCode": "def close_db(error):\n    \"\"\"Remove the current sqlalchemy session\"\"\"\n    storage.close()\n@app.route(\"/\", strict_slashes=False)\ndef index():\n    \"\"\"landing page\"\"\"\n    return render_template(\"index.html\", cache_id=uuid.uuid4)\n@app.route(\"/signup\", methods=['GET', 'POST'], strict_slashes=False)\ndef signup():\n    \"\"\"signup page\"\"\"",
         "detail": "web_dynamic.app",
         "documentation": {}
     },
@@ -1272,7 +1390,25 @@
         "kind": 2,
         "importPath": "web_dynamic.app",
         "description": "web_dynamic.app",
-        "peekOfCode": "def index():\n    \"\"\"landing page\"\"\"\n    return render_template(\"index.html\", cache_id=uuid.uuid4)\n@app.route(\"/properties\", strict_slashes=False)\ndef property():\n    \"\"\"List all the users\"\"\"\n    return render_template(\"testbase.html\",\n                           cache_id=uuid.uuid4())\n@app.route(\"/buy\", strict_slashes=False)\ndef user():",
+        "peekOfCode": "def index():\n    \"\"\"landing page\"\"\"\n    return render_template(\"index.html\", cache_id=uuid.uuid4)\n@app.route(\"/signup\", methods=['GET', 'POST'], strict_slashes=False)\ndef signup():\n    \"\"\"signup page\"\"\"\n    if request.method == 'POST':\n        msg = \"Hello, World!\"\n        print(msg)\n        return redirect(url_for(\"login\", msg=msg))",
+        "detail": "web_dynamic.app",
+        "documentation": {}
+    },
+    {
+        "label": "signup",
+        "kind": 2,
+        "importPath": "web_dynamic.app",
+        "description": "web_dynamic.app",
+        "peekOfCode": "def signup():\n    \"\"\"signup page\"\"\"\n    if request.method == 'POST':\n        msg = \"Hello, World!\"\n        print(msg)\n        return redirect(url_for(\"login\", msg=msg))\n    return render_template(\"signup.html\")\n@app.route(\"/login\", strict_slashes=False)\ndef login():\n    \"\"\"login page\"\"\"",
+        "detail": "web_dynamic.app",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "kind": 2,
+        "importPath": "web_dynamic.app",
+        "description": "web_dynamic.app",
+        "peekOfCode": "def login():\n    \"\"\"login page\"\"\"\n    return render_template(\"login.html\")\n@app.route(\"/properties\", strict_slashes=False)\ndef property():\n    \"\"\"List all the users\"\"\"\n    return render_template(\"testbase.html\",\n                           cache_id=uuid.uuid4())\n@app.route(\"/buy\", strict_slashes=False)\ndef user():",
         "detail": "web_dynamic.app",
         "documentation": {}
     },
@@ -1308,7 +1444,7 @@
         "kind": 5,
         "importPath": "web_dynamic.app",
         "description": "web_dynamic.app",
-        "peekOfCode": "app = Flask(__name__)\n@app.teardown_appcontext\ndef close_db(error):\n    \"\"\"Remove the current sqlalchemy session\"\"\"\n    storage.close()\n@app.route(\"/\", strict_slashes=False)\ndef index():\n    \"\"\"landing page\"\"\"\n    return render_template(\"index.html\", cache_id=uuid.uuid4)\n@app.route(\"/properties\", strict_slashes=False)",
+        "peekOfCode": "app = Flask(__name__)\n@app.teardown_appcontext\ndef close_db(error):\n    \"\"\"Remove the current sqlalchemy session\"\"\"\n    storage.close()\n@app.route(\"/\", strict_slashes=False)\ndef index():\n    \"\"\"landing page\"\"\"\n    return render_template(\"index.html\", cache_id=uuid.uuid4)\n@app.route(\"/signup\", methods=['GET', 'POST'], strict_slashes=False)",
         "detail": "web_dynamic.app",
         "documentation": {}
     }

@@ -7,6 +7,21 @@ from api.v1.views import app_views
 from flask import abort, jsonify, request
 
 
+@app_views.route("/users/<user_id>/addresses", methods=['GET'],
+                 strict_slashes=False)
+def get_address_for_a_user(user_id=None):
+    """
+    get a address that is associated to a user
+    """
+    user = storage.get(User, user_id)
+    if user is None:
+        abort(404)
+    new_list = []
+    for address in user.addresses:
+        new_list.append(address.to_dict())
+    return jsonify(new_list)
+
+
 @app_views.route("/addresses", methods=['GET'],
                  strict_slashes=False)
 @app_views.route("/addresses/<address_id>", methods=['GET'],

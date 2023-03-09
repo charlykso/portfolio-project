@@ -79,9 +79,15 @@
 									<span style="color: #fff">In</span></a
 								>
 							</div>
-							<div class="btn-signin">
-								<a href="login.html">sign in</a>
-							</div>
+							{% if session.loggedin %}
+								<div class="btn-signin">
+									<a href={{url_for('logout')}}>sign out</a>
+								</div>
+							{% else %}
+								<div class="btn-signin">
+									<a href="login.html">sign in</a>
+								</div>
+							{% endif %}
 						</div>
 					</div>
 				</header>
@@ -109,7 +115,7 @@
 					<h1>Authentified.com.ng</h1>
 					<p>Your gateway to authentic property</p>
 					<div class="button">
-						<button><a href="signup.html">Sell it <span>/</span>Rent it</a></button>
+						<button><a href={{url_for('signup')}}>Sell it <span>/</span>Rent it</a></button>
 					</div>
 				</div>
 			</section>
