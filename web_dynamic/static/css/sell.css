@@ -54,7 +54,7 @@ div.pix a {
   box-shadow: 0px 2px 4px rgb(168 168 168 / 50%);
   border-radius: 10px;
   margin: 30px auto 10px;
-  padding: 57px;
+  padding: 20px 57px 57px 57px;
   align-content: center;
     
   
@@ -68,9 +68,16 @@ label{
 .description{
   font: 500 1rem 'Roboto', sans-serif;
 }
+.form-group{
+  margin: 10px auto;
+  width: 100%;
+}
+.form-group select option{
+  font: 500 1rem 'Roboto', sans-serif;
+}
 .form__input{
   display: block;
-  width: 70%;
+  width: 100%;
   padding: 0.75rem;
   box-sizing: border-box;
   border-radius: var(--border-redius);
@@ -85,7 +92,7 @@ label{
   background: #FFFFFF;
 }
 .form__button{
-  width: 60%;
+  width: 100%;
   padding: 1rem 2rem;
   font-weight: bold;
   font-size: 1.1rem;
@@ -108,17 +115,18 @@ label{
 .form__button:active{
   transform: scale(0.98);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.msg .msg{
+  color: #459745;
+}
+.msg .error_msg{
+  color: #ff0000;
+}
+.wrapper .top-img{
+  border: none;
+  width: 100%;
+  text-align: center;
+}
+.wrapper h3{
+  text-align: center;
+  margin-top: -10px;
+}

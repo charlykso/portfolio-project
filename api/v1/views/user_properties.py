@@ -88,6 +88,8 @@ def create_property(user_id=None):
         abort(400, "Missing landmark")
     if "type" not in request.get_json():
         abort(400, "Missing type")
+    if "price" not in request.get_json():
+        abort(400, "Missing price")
     if "gen_property_id" not in request.get_json():
         abort(400, "Missing the property id")
     search_term = request.get_json()['status'].upper()\

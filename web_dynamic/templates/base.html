@@ -12,10 +12,8 @@
 		<link rel="stylesheet" href="../static/css/buy-section.css?{{cache_id}}" />
 		<link rel="stylesheet" href="../static/css/buy-footer.css?{{cache_id}}" />
 		<link rel="stylesheet" href="../static/css/buy-main.css?{{cache_id}}" />
-		<link
-			rel="icon"
-			href="../static/images/authentified-website-favicon-white.png?{{cache_id}}"
-		/>
+		<link rel="stylesheet" href="../static/css/landing_page.css?{{cache_id}}">
+		<link rel="icon" href="../static/images/authentified-website-favicon-color.png?{{cache_id}}">
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -80,9 +78,15 @@
 									<span style="color: #fff">In</span></a
 								>
 							</div>
-							<div class="btn-signin">
-								<a href="login.html">sign in</a>
-							</div>
+							{% if session.loggedin %}
+								<div class="btn-signin">
+									<a href={{url_for('logout')}}>sign out</a>
+								</div>
+							{% else %}
+								<div class="btn-signin">
+									<a href={{url_for('login')}}>sign in</a>
+								</div>
+							{% endif %}
 						</div>
 					</div>
 				</header>
@@ -97,28 +101,21 @@
 							</a>
 						</div>
 						<div class="nav">
-							<a href="buy.html">Buy</a>
-							<a href="#">Rent</a>
+							<a href={{url_for('buy')}}>Buy</a>
+							<a href={% if session.loggedin %}
+								{{url_for('sell')}}
+							{% else %}
+								{{url_for('signup')}}
+							{% endif %}>Sell</a>
 							<a href="new_property.html">New Properties</a>
 							<a href="commercial.html">Commercial</a>
 						</div>
 					</div>
 				</header>
 			</div>
-			<section class="banner">
-				<div class="search">
-					<h1>Search for your property here</h1>
-					<div class="input">
-						<input type="text" placeholder="Keyword search only..." />
-						<button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-					</div>
-				</div>
-			</section>
-			<main class="main">
 				{% block content %}
 				
 				{% endblock %}
-			</main>
 			<footer class="footer">
 				<div class="top-footer">
 					<div class="first-item footer-flex">
@@ -138,7 +135,7 @@
 					</div>
 					<div class="second-item footer-flex">
 						<h4>Solutions</h4>
-						Buy Rent New Property Commercial
+						Buy Sell New Property Commercial
 					</div>
 					<div class="third-item footer-flex">
 						<h4>Sorpport</h4>
