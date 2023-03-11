@@ -81,6 +81,14 @@
         "documentation": {}
     },
     {
+        "label": "storage",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
         "label": "abort",
         "importPath": "flask",
         "description": "flask",
@@ -289,23 +297,7 @@
         "documentation": {}
     },
     {
-        "label": "redirect",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "abort",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "url_for",
+        "label": "\\",
         "importPath": "flask",
         "description": "flask",
         "isExtraImport": true,
@@ -385,6 +377,14 @@
         "documentation": {}
     },
     {
+        "label": "User",
+        "importPath": "models.user",
+        "description": "models.user",
+        "isExtraImport": true,
+        "detail": "models.user",
+        "documentation": {}
+    },
+    {
         "label": "app_views",
         "importPath": "api.v1.views",
         "description": "api.v1.views",
@@ -550,6 +550,14 @@
         "description": "models.base_model",
         "isExtraImport": true,
         "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "Property",
+        "importPath": "models.property",
+        "description": "models.property",
+        "isExtraImport": true,
+        "detail": "models.property",
         "documentation": {}
     },
     {
@@ -650,6 +658,14 @@
         "documentation": {}
     },
     {
+        "label": "Property_img",
+        "importPath": "models.property_img",
+        "description": "models.property_img",
+        "isExtraImport": true,
+        "detail": "models.property_img",
+        "documentation": {}
+    },
+    {
         "label": "requests,",
         "kind": 6,
         "isExtraImport": true,
@@ -664,6 +680,15 @@
         "description": "api.v1.collectives",
         "isExtraImport": true,
         "detail": "api.v1.collectives",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
         "documentation": {}
     },
     {
@@ -844,6 +869,14 @@
         "documentation": {}
     },
     {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
         "label": "Column",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
@@ -949,6 +982,15 @@
     },
     {
         "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
         "importPath": "datetime",
         "description": "datetime",
         "isExtraImport": true,
@@ -981,11 +1023,36 @@
         "documentation": {}
     },
     {
+        "label": "md5",
+        "importPath": "hashlib",
+        "description": "hashlib",
+        "isExtraImport": true,
+        "detail": "hashlib",
+        "documentation": {}
+    },
+    {
+        "label": "json,",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json.",
+        "description": "json.",
+        "detail": "json.",
+        "documentation": {}
+    },
+    {
+        "label": "CheckEmail",
+        "importPath": "web_dynamic.collective.checkEmail",
+        "description": "web_dynamic.collective.checkEmail",
+        "isExtraImport": true,
+        "detail": "web_dynamic.collective.checkEmail",
+        "documentation": {}
+    },
+    {
         "label": "get_user",
         "kind": 2,
         "importPath": "api.v1.collectives.checkUser",
         "description": "api.v1.collectives.checkUser",
-        "peekOfCode": "def get_user(cls, user_id):\n    \"\"\"to get user details\"\"\"\n    new_list = []\n    key = \"User.\" + str(user_id)\n    if user_id is None:\n        abort(400, \"Missing user id\")\n    elif key in storage.all(cls).keys():\n        return storage.all(cls)[key].to_dict()\n    else:\n        abort(404)",
+        "peekOfCode": "def get_user(cls, user_id):\n    \"\"\"to get user details\"\"\"\n    # new_list = []\n    key = \"User.\" + str(user_id)\n    if user_id is None:\n        abort(400, \"Missing user id\")\n    elif key in storage.all(cls).keys():\n        return storage.all(cls)[key].to_dict()\n    else:\n        abort(404)",
         "detail": "api.v1.collectives.checkUser",
         "documentation": {}
     },
@@ -1377,6 +1444,15 @@
         "documentation": {}
     },
     {
+        "label": "CheckEmail",
+        "kind": 6,
+        "importPath": "web_dynamic.collective.checkEmail",
+        "description": "web_dynamic.collective.checkEmail",
+        "peekOfCode": "class CheckEmail:\n    \"\"\"a class to check if email exists\"\"\"\n    def emailExists(email):\n        \"\"\"a method to check if email exists\"\"\"\n        key = \"User.\" +email\n        # users = storage.all(User)\n        for key, value in storage.all(User).items():\n            if value.email == email:\n                return True\n        return False",
+        "detail": "web_dynamic.collective.checkEmail",
+        "documentation": {}
+    },
+    {
         "label": "close_db",
         "kind": 2,
         "importPath": "web_dynamic.app",
@@ -1390,7 +1466,7 @@
         "kind": 2,
         "importPath": "web_dynamic.app",
         "description": "web_dynamic.app",
-        "peekOfCode": "def index():\n    \"\"\"landing page\"\"\"\n    return render_template(\"index.html\", cache_id=uuid.uuid4)\n@app.route(\"/signup\", methods=['GET', 'POST'], strict_slashes=False)\ndef signup():\n    \"\"\"signup page\"\"\"\n    if request.method == 'POST':\n        msg = \"Hello, World!\"\n        print(msg)\n        return redirect(url_for(\"login\", msg=msg))",
+        "peekOfCode": "def index():\n    \"\"\"landing page\"\"\"\n    return render_template(\"index.html\", cache_id=uuid.uuid4)\n@app.route(\"/signup\", methods=['GET', 'POST'], strict_slashes=False)\ndef signup():\n    \"\"\"signup page\"\"\"\n    msg=\"\"\n    if request.method == 'POST':\n        firstname = request.form['firstname']\n        lastname = request.form['lastname']",
         "detail": "web_dynamic.app",
         "documentation": {}
     },
@@ -1399,7 +1475,7 @@
         "kind": 2,
         "importPath": "web_dynamic.app",
         "description": "web_dynamic.app",
-        "peekOfCode": "def signup():\n    \"\"\"signup page\"\"\"\n    if request.method == 'POST':\n        msg = \"Hello, World!\"\n        print(msg)\n        return redirect(url_for(\"login\", msg=msg))\n    return render_template(\"signup.html\")\n@app.route(\"/login\", strict_slashes=False)\ndef login():\n    \"\"\"login page\"\"\"",
+        "peekOfCode": "def signup():\n    \"\"\"signup page\"\"\"\n    msg=\"\"\n    if request.method == 'POST':\n        firstname = request.form['firstname']\n        lastname = request.form['lastname']\n        email = request.form['email']\n        phone_no = request.form['phone_no']\n        gender = request.form['gender']\n        password = request.form['password']",
         "detail": "web_dynamic.app",
         "documentation": {}
     },
@@ -1408,7 +1484,7 @@
         "kind": 2,
         "importPath": "web_dynamic.app",
         "description": "web_dynamic.app",
-        "peekOfCode": "def login():\n    \"\"\"login page\"\"\"\n    return render_template(\"login.html\")\n@app.route(\"/properties\", strict_slashes=False)\ndef property():\n    \"\"\"List all the users\"\"\"\n    return render_template(\"testbase.html\",\n                           cache_id=uuid.uuid4())\n@app.route(\"/buy\", strict_slashes=False)\ndef user():",
+        "peekOfCode": "def login():\n    \"\"\"login page\"\"\"\n    msg=\"\"\n    email = request.form.get('email')\n    password = request.form.get('password')\n    if request.method == \"POST\":\n        if not email or not password:\n            msg = \"Please fill in correctly\"\n            return render_template('login.html', msg=msg)\n        users = storage.all(User)",
         "detail": "web_dynamic.app",
         "documentation": {}
     },
@@ -1417,16 +1493,16 @@
         "kind": 2,
         "importPath": "web_dynamic.app",
         "description": "web_dynamic.app",
-        "peekOfCode": "def property():\n    \"\"\"List all the users\"\"\"\n    return render_template(\"testbase.html\",\n                           cache_id=uuid.uuid4())\n@app.route(\"/buy\", strict_slashes=False)\ndef user():\n    \"\"\"List of all users\"\"\"\n    users = storage.all(User).values()\n    users = sorted(users, key=lambda k: k.firstname)\n    return render_template(\"buy.html\",",
+        "peekOfCode": "def property():\n    \"\"\"List all the users\"\"\"\n    return render_template(\"testbase.html\",\n                           cache_id=uuid.uuid4())\n@app.route(\"/buy\", strict_slashes=False)\ndef buy():\n    \"\"\"List of all properties\"\"\"\n    properties = storage.all(Property).values()\n    properties = sorted(properties, key=lambda k: k.description)\n    for val in properties:",
         "detail": "web_dynamic.app",
         "documentation": {}
     },
     {
-        "label": "user",
+        "label": "buy",
         "kind": 2,
         "importPath": "web_dynamic.app",
         "description": "web_dynamic.app",
-        "peekOfCode": "def user():\n    \"\"\"List of all users\"\"\"\n    users = storage.all(User).values()\n    users = sorted(users, key=lambda k: k.firstname)\n    return render_template(\"buy.html\",\n                           users=users,\n                           cache_id=uuid.uuid4())\n@app.route(\"/details/<property_id>\", strict_slashes=False)\ndef single_property(property_id):\n    \"\"\"Get the details of one property\"\"\"",
+        "peekOfCode": "def buy():\n    \"\"\"List of all properties\"\"\"\n    properties = storage.all(Property).values()\n    properties = sorted(properties, key=lambda k: k.description)\n    for val in properties:\n        for inval in val.property_imgs:\n            print(inval.img_path)\n    return render_template(\"buy.html\",\n                           properties=properties,\n                           cache_id=uuid.uuid4())",
         "detail": "web_dynamic.app",
         "documentation": {}
     },
@@ -1435,7 +1511,34 @@
         "kind": 2,
         "importPath": "web_dynamic.app",
         "description": "web_dynamic.app",
-        "peekOfCode": "def single_property(property_id):\n    \"\"\"Get the details of one property\"\"\"\n    return render_template(\"details.html\", cache_id=uuid.uuid4)\nif __name__ == \"__main__\":\n    \"\"\" Main Function \"\"\"\n    app.run(host='0.0.0.0', port=5002, debug=True)",
+        "peekOfCode": "def single_property(property_id):\n    \"\"\"Get the details of one property\"\"\"\n    return render_template(\"details.html\", cache_id=uuid.uuid4)\n@app.route(\"/sell\", methods=['GET', 'POST'], strict_slashes=False)\ndef sell():\n    \"\"\"sell page\"\"\"\n    msg=\"\"\n    err_msg = \"\"\n    if session['id']:\n        user_id = session['id']",
+        "detail": "web_dynamic.app",
+        "documentation": {}
+    },
+    {
+        "label": "sell",
+        "kind": 2,
+        "importPath": "web_dynamic.app",
+        "description": "web_dynamic.app",
+        "peekOfCode": "def sell():\n    \"\"\"sell page\"\"\"\n    msg=\"\"\n    err_msg = \"\"\n    if session['id']:\n        user_id = session['id']\n    if request.method == \"POST\":\n        gen_property_id = request.form['gen_property_id']\n        type = request.form['type']\n        status = request.form['status']",
+        "detail": "web_dynamic.app",
+        "documentation": {}
+    },
+    {
+        "label": "uploadImages",
+        "kind": 2,
+        "importPath": "web_dynamic.app",
+        "description": "web_dynamic.app",
+        "peekOfCode": "def uploadImages():\n    \"\"\"for property image upload\"\"\"\n    filepath = 'web_dynamic/static/images/property_images/{}'\n    if request.method == \"POST\":\n        if request.files is not None:\n            for image in request.files:\n                print(request.files[image].filename)\n                print(request.form['property_id'])\n                item = request.files[image].filename\n                request.files[image].save(filepath.format(item))",
+        "detail": "web_dynamic.app",
+        "documentation": {}
+    },
+    {
+        "label": "logout",
+        "kind": 2,
+        "importPath": "web_dynamic.app",
+        "description": "web_dynamic.app",
+        "peekOfCode": "def logout():\n    session.pop('loggedin', None)\n    session.pop('id', None)\n    session.pop('firstname', None)\n    session.pop('lastname', None)\n    session.pop('email', None)\n    session.pop('cache_id', None)\n    return redirect(url_for('login'))\nif __name__ == \"__main__\":\n    \"\"\" Main Function \"\"\"",
         "detail": "web_dynamic.app",
         "documentation": {}
     },
@@ -1444,7 +1547,16 @@
         "kind": 5,
         "importPath": "web_dynamic.app",
         "description": "web_dynamic.app",
-        "peekOfCode": "app = Flask(__name__)\n@app.teardown_appcontext\ndef close_db(error):\n    \"\"\"Remove the current sqlalchemy session\"\"\"\n    storage.close()\n@app.route(\"/\", strict_slashes=False)\ndef index():\n    \"\"\"landing page\"\"\"\n    return render_template(\"index.html\", cache_id=uuid.uuid4)\n@app.route(\"/signup\", methods=['GET', 'POST'], strict_slashes=False)",
+        "peekOfCode": "app = Flask(__name__)\napp.secret_key = 'ABCabcDEFdef123456'\n@app.teardown_appcontext\ndef close_db(error):\n    \"\"\"Remove the current sqlalchemy session\"\"\"\n    storage.close()\n@app.route(\"/\", strict_slashes=False)\ndef index():\n    \"\"\"landing page\"\"\"\n    return render_template(\"index.html\", cache_id=uuid.uuid4)",
+        "detail": "web_dynamic.app",
+        "documentation": {}
+    },
+    {
+        "label": "app.secret_key",
+        "kind": 5,
+        "importPath": "web_dynamic.app",
+        "description": "web_dynamic.app",
+        "peekOfCode": "app.secret_key = 'ABCabcDEFdef123456'\n@app.teardown_appcontext\ndef close_db(error):\n    \"\"\"Remove the current sqlalchemy session\"\"\"\n    storage.close()\n@app.route(\"/\", strict_slashes=False)\ndef index():\n    \"\"\"landing page\"\"\"\n    return render_template(\"index.html\", cache_id=uuid.uuid4)\n@app.route(\"/signup\", methods=['GET', 'POST'], strict_slashes=False)",
         "detail": "web_dynamic.app",
         "documentation": {}
     }

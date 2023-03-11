@@ -26,16 +26,14 @@
 					<div class="big-img">
 						<img src="../static/images/bg2.jpg" alt="">
 					</div>
+					
 					<div class="smal-img">
+						<!-- {% for image in property.property_imgs[:3] %}
 						<div class="inner-small-img img1">
-							<img src="../static/images/bg3.jpg" alt="">
+							<img src={{image.img_path}} alt="">
+							<p>{{image.property_id}}</p>
 						</div>
-						<div class="inner-small-img img2">
-							<img src="../static/images/bg4.png" alt="">
-						</div>
-						<div class="inner-small-img img3">
-							<img src="../static/images/bg5.jpg" alt="">
-						</div>
+						{% endfor %} -->
 					</div>
 				</div>
 				<div class="details">
@@ -52,9 +50,9 @@
 							</p>
 							<p class="landmarks">
 								<i class="fa fa-shopping-bag" aria-hidden="true"></i>
-								{{property.landmark}}
-								<i class="fa fa-graduation-cap" aria-hidden="true"></i>
-								{{property.landmark}}
+								{{property.landmark}} <br>
+								<!-- <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+								{{property.landmark}} -->
 							</p>
 						</div>
 					</div>
@@ -73,8 +71,4 @@
 		{% endfor %}
 	</div>
 </main>
-{% for user in users %}
-	<h2>{{user.firstname}} {{user.lastname}}</h2>
-	<h4></h4>
-{% endfor %}
 {% endblock %}
