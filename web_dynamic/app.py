@@ -139,10 +139,20 @@ def buy():
                            properties=properties,
                            cache_id=uuid.uuid4())
 
-@app.route("/details/<property_id>", strict_slashes=False)
-def single_property(property_id):
+
+@app.route("/properties/<property_id>", strict_slashes=False)
+def details(property_id):
     """Get the details of one property"""
-    return render_template("details.html", cache_id=uuid.uuid4)
+
+    property = storage.get(Property, property_id)
+    user = storage.get(User, property.user_id)
+    print(user)
+    # for val in property.property_imgs[:1]:
+    #     print(val.img_path)
+    return render_template("details.html",
+                           property=property,
+                           user=user,
+                           cache_id=uuid.uuid4)
 
 
 @app.route("/sell", methods=['GET', 'POST'], strict_slashes=False)
@@ -150,6 +160,9 @@ def sell():
     """sell page"""
     msg=""
     err_msg = ""
+    args = request.args
+    if args is not None:
+        msg = args.get('msg')
     if session['id']:
         user_id = session['id']
     if request.method == "POST":
@@ -193,19 +206,23 @@ def sell():
     new_list = []
     for property in user.properties:
         new_list.append(property)
-    return render_template("sell.html", property=new_list)
+    return render_template("sell.html",
+                           property=new_list,
+                           msg=msg)
 
 
 @app.route("/uploadImage", methods=['POST'], strict_slashes=False)
 def uploadImages():
     """for property image upload"""
+    msg=''
+    err_msg = ' '
     filepath = 'web_dynamic/static/images/property_images/{}'
     if request.method == "POST":
         if request.files is not None:
             for image in request.files:
                 
-                print(request.files[image].filename)
-                print(request.form['property_id'])
+                # print(request.files[image].filename)
+                # print(request.form['property_id'])
                 item = request.files[image].filename
                 request.files[image].save(filepath.format(item))
                 date = datetime.datetime.now()
@@ -224,6 +241,8 @@ def uploadImages():
                 """renaming the file"""
                 os.rename(src, img_dest)
 
+                img_dest = img_dest[12:]
+                print(img_dest)
                 x = {
                     "img_path" : img_dest,
                     "property_img": request.form["property_id"]
@@ -234,14 +253,14 @@ def uploadImages():
                 singleImage.property_id = request.form['property_id']
                 singleImage.img_path = img_dest
                 
-                print(singleImage)
+                # print(singleImage)
                 singleImage.save()
                 
-            msg = "Uploaded successfully"
-            return redirect(url_for("sell"), msg=msg)
+            msg = "Image uploaded successfully"
+            return redirect(url_for("sell", msg=msg))
         
-        msg = "Uploaded successfully"
-        return redirect(url_for("sell"), msg=msg)
+        err_msg = "Please add an images"
+        return render_template("sell.html", err_msg=err_msg)
         # print(request.form)
 
     return redirect(url_for("sell"))

@@ -1507,11 +1507,11 @@
         "documentation": {}
     },
     {
-        "label": "single_property",
+        "label": "details",
         "kind": 2,
         "importPath": "web_dynamic.app",
         "description": "web_dynamic.app",
-        "peekOfCode": "def single_property(property_id):\n    \"\"\"Get the details of one property\"\"\"\n    return render_template(\"details.html\", cache_id=uuid.uuid4)\n@app.route(\"/sell\", methods=['GET', 'POST'], strict_slashes=False)\ndef sell():\n    \"\"\"sell page\"\"\"\n    msg=\"\"\n    err_msg = \"\"\n    if session['id']:\n        user_id = session['id']",
+        "peekOfCode": "def details(property_id):\n    \"\"\"Get the details of one property\"\"\"\n    property = storage.get(Property, property_id)\n    user = storage.get(User, property.user_id)\n    print(user)\n    # for val in property.property_imgs[:1]:\n    #     print(val.img_path)\n    return render_template(\"details.html\",\n                           property=property,\n                           user=user,",
         "detail": "web_dynamic.app",
         "documentation": {}
     },
@@ -1520,7 +1520,7 @@
         "kind": 2,
         "importPath": "web_dynamic.app",
         "description": "web_dynamic.app",
-        "peekOfCode": "def sell():\n    \"\"\"sell page\"\"\"\n    msg=\"\"\n    err_msg = \"\"\n    if session['id']:\n        user_id = session['id']\n    if request.method == \"POST\":\n        gen_property_id = request.form['gen_property_id']\n        type = request.form['type']\n        status = request.form['status']",
+        "peekOfCode": "def sell():\n    \"\"\"sell page\"\"\"\n    msg=\"\"\n    err_msg = \"\"\n    args = request.args\n    if args is not None:\n        msg = args.get('msg')\n    if session['id']:\n        user_id = session['id']\n    if request.method == \"POST\":",
         "detail": "web_dynamic.app",
         "documentation": {}
     },
@@ -1529,7 +1529,7 @@
         "kind": 2,
         "importPath": "web_dynamic.app",
         "description": "web_dynamic.app",
-        "peekOfCode": "def uploadImages():\n    \"\"\"for property image upload\"\"\"\n    filepath = 'web_dynamic/static/images/property_images/{}'\n    if request.method == \"POST\":\n        if request.files is not None:\n            for image in request.files:\n                print(request.files[image].filename)\n                print(request.form['property_id'])\n                item = request.files[image].filename\n                request.files[image].save(filepath.format(item))",
+        "peekOfCode": "def uploadImages():\n    \"\"\"for property image upload\"\"\"\n    msg=''\n    err_msg = ' '\n    filepath = 'web_dynamic/static/images/property_images/{}'\n    if request.method == \"POST\":\n        if request.files is not None:\n            for image in request.files:\n                # print(request.files[image].filename)\n                # print(request.form['property_id'])",
         "detail": "web_dynamic.app",
         "documentation": {}
     },

@@ -23,22 +23,16 @@
 		<div class="results">
 			<div class="upper-result">
 				<div class="result-img">
+					{% for item in property.property_imgs[:	1] %}
 					<div class="big-img">
-						<img src="../static/images/bg2.jpg" alt="">
+						<img src={{item.img_path}} alt="">
 					</div>
+					{% endfor %}
 					
-					<div class="smal-img">
-						<!-- {% for image in property.property_imgs[:3] %}
-						<div class="inner-small-img img1">
-							<img src={{image.img_path}} alt="">
-							<p>{{image.property_id}}</p>
-						</div>
-						{% endfor %} -->
-					</div>
 				</div>
 				<div class="details">
 					<div class="buttons">
-						<button class="sale">SALE</button>
+						<button class="sale">{{property.availability.upper()}}</button>
 						<button class="new">NEW</button>
 					</div>
 					<div class="description">
@@ -49,10 +43,8 @@
 								{{property.state}}
 							</p>
 							<p class="landmarks">
-								<i class="fa fa-shopping-bag" aria-hidden="true"></i>
-								{{property.landmark}} <br>
-								<!-- <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-								{{property.landmark}} -->
+								<i class="fa fa-compass" aria-hidden="true"></i>
+								{{property.landmark}} 
 							</p>
 						</div>
 					</div>
@@ -62,7 +54,8 @@
 						</div>
 						<div class="amount">
 							<h4>#{{property.price}}</h4>
-							<button>Take a tour</button>
+							<!-- <h4>{{property.id}}</h4> -->
+							<button><a href="/properties/{{property.id}}">Take a tour</a></button>
 						</div>
 					</div>
 				</div>

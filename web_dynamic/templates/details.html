@@ -1,237 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Authentified | Buy property</title>
-		<link rel="stylesheet" href="../static/css/buy-header.css" />
-		<link rel="stylesheet" href="../static/css/body.css" />
-		<link rel="stylesheet" href="../static/css/buy-section.css">
-		<link rel="stylesheet" href="../static/css/buy-footer.css">
-		<link rel="stylesheet" href="../static/css/buy-main.css">
-		<link rel="stylesheet" href="../static/css/details-main.css">
-		<link
-			rel="icon"
-			href="../static/images/authentified-website-favicon-white.png"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-		/>
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"
-			integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		></script>
-	</head>
-	<body>
-		<div class="container">
-			<div class="header-container">
-				<header class="first-header">
-					<div class="header">
-						<div class="left-header">
-							<p>
-								<i
-									class="fa fa-envelope"
-									aria-hidden="true"
-									style="color: #f13054"
-								></i>
-								info@authentified.com
-							</p>
-							<p>
-								<i
-									class="fa fa-phone"
-									aria-hidden="true"
-									style="color: #f13054"
-								></i>
-								+2347062682820
-							</p>
-							<p>+2347062682820</p>
-						</div>
-						<div class="right-header">
-							<div class="socials">
-								<a
-									href="https://www.facebook.com/charlykso"
-									style="text-decoration: none"
-									><i
-										class="fa fa-check-square"
-										aria-hidden="true"
-										style="color: #f13054"
-									></i>
-									<span style="color: #fff">Fb</span>
-								</a>
-								<a href="#" style="text-decoration: none"
-									><i
-										class="fa fa-check-square"
-										aria-hidden="true"
-										style="color: #f13054"
-									></i>
-									<span style="color: #fff">Tw</span></a
-								>
-								<a href="#" style="text-decoration: none"
-									><i
-										class="fa fa-check-square"
-										aria-hidden="true"
-										style="color: #f13054"
-									></i>
-									<span style="color: #fff">In</span></a
-								>
-							</div>
-							<div class="btn-signin">
-								<a href="login.html">sign in</a>
-							</div>
-						</div>
-					</div>
-				</header>
-				<header class="second-header-bg">
-					<div class="second-header">
-						<div class="logo">
-							<a href="index.html">
-								<img
-									src="../static/images/authentified-high-resolution-logo-color-on-transparent-background.png"
-									alt=""
-								/>
-							</a>
-						</div>
-						<div class="nav">
-							<a href="buy.html">Buy</a>
-							<a href="#">Rent</a>
-							<a href="new_property.html">New Properties</a>
-							<a href="commercial.html">Commercial</a>
-						</div>
-					</div>
-				</header>
-			</div>
-			<section class="banner">
-				<div class="search">
-					<h1>Search for your property here</h1>
-					<div class="input">
-						<input type="text" placeholder="Keyword search only..." />
-						<button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-					</div>
-				</div>
-			</section>
-			<main class="main">
-				<div class="details-inside-main">
-					<div class="img-area">
-						<div class="big-img">
-							<img src="../static/images/bg4.png" alt="">
-						</div>
-						<div class="small-img">
-							<div class="small-img1 img">
-								<img src="../static/images/bg5.jpg" alt="">
-							</div>
-							<div class="small-img2 img">
-								<img src="../static/images/bg3.jpg" alt="">
-							</div>
-							<div class="small-img3 img">
-								<img src="../static/images/bg4.png" alt="">
-							</div>
-						</div>
-					</div>
-					<div class="under-img">
-						<div class="buttons">
-							<button class="sale">SALE</button>
-							<button class="new">NEW</button>
-						</div>
-						<div class="time">
-							<i class="fa fa-calendar-check-o time-icon" aria-hidden="true"></i> 2023-02-17 2:03:40.000
-						</div>
-						<div class="view">
-							<i class="fa fa-eye eye-icon" aria-hidden="true"></i> 25245 views
-						</div>
-					</div>
-					<div class="content-description">
-						<div class="left-description">
-							<div class="desc-details">
-								<div class="desc1">
-									<h2>4 Units 4 Bedroom terrace duplex</h2>
-									<p><i class="fa fa-map-marker location-icon" aria-hidden="true"></i> Gaduwa, Municipal area council, Abuja</p>
-								</div>
-								<div class="desc2">
-									<h4>Description</h4>
-									<p>
-										4 units of 4 bedroom terrace duplex for sale
-									</p>
-									<p class="read-more">
-										Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, repellat. <a href="#">Read more</a>
-									</p>
-								</div>
-								<div class="desc3">
-									<h4>Landmarks</h4>
-									<p><input type="checkbox" checked> Supermarket</p>
-									<p><input type="checkbox" checked> School</p>
-								</div>
+{% extends 'base.html' %}
+{% block title %}
+	Property details
+{% endblock %}
+{% block content %}
 
-							</div>
-							<div class="price">
-								&#8358;38,000,000
-							</div>
-						</div>
-						<div class="owner-information">
-							<div class="owners-heading">
-								<h4>owner information</h4>
-							</div>
-							<div class="owners-body">
-								<h2>Name of the owner</h2>
-								<p><i class="fa fa-mobile" aria-hidden="true"></i> 07062682820 </p>
-								<p><i class="fa fa-phone" aria-hidden="true"></i> +2347062682820 </p>
-								<p><i class="fa fa-envelope" aria-hidden="true"></i> Authentified@info.com </p>
-							</div>
-						</div>
-					</div>
+<main class="main">
+	<div class="details-inside-main">
+		<div class="img-area">
+			{% for item in property.property_imgs[:1] %}
+			<div class="big-img">
+				<img src=../{{item.img_path}} alt="">
+			</div>
+			{% endfor %}
+			<div class="small-img">
+				{% for image in property.property_imgs[:3] %}
+				<div class="small-img1 img">
+					<img src=../{{image.img_path}} alt="">
 				</div>
-			</main>
-			<footer class="footer">
-				<div class="top-footer">
-					<div class="first-item footer-flex">
-						<div class="first-item-img">
-							<img
-								src="../static/images/authentified-high-resolution-logo-white-on-transparent-background.png"
-								alt=""
-							/>
-						</div>
-						<div class="contact">
-							<p>No 9B Lorem ipsum dolor sit amet. Lorem, ipsum.</p>
-							<p>Lorem ipsum dolor sit amet.</p>
-							<p>info@authentified.com</p>
-							<p>+23462682820</p>
-							<p>+23462682820</p>
-						</div>
-					</div>
-					<div class="second-item footer-flex">
-						<h4>Solutions</h4>
-						Buy Rent New Property Commercial
-					</div>
-					<div class="third-item footer-flex">
-						<h4>Sorpport</h4>
-						FAQs Contac Feedback
-						<h4>COMPANY</h4>
-						About Terms & Conditions Privacy Policy
-					</div>
-					<div class="fourth-item footer-flex">
-						<h4>Subscribe to Our Newsletter</h4>
-						<p>
-							Join our subscribers list to get the latest news, updpate, and
-							special offerss delivered directly to your inbox.
-						</p>
-						<div class="footer-email">
-							<input type="email" placeholder="Email address" />
-						</div>
-						<input type="submit" value="Submit" />
-					</div>
-				</div>
-				<div class="bottom-footer-container">
-					<div class="bottom-footer">
-						<div class="left-text">
-							&copy; 2023 Authentified.ng. ALl right reserved
-						</div>
-						<div class="footer-socials"></div>
-					</div>
-				</div>
-			</footer>
+				{% endfor %}
+			</div>
 		</div>
-	</body>
-</html>
+		<div class="under-img">
+			<div class="buttons">
+				<button class="sale">{{property.availability.upper()}}</button>
+				<button class="new">NEW</button>
+			</div>
+			<div class="time">
+				<i class="fa fa-calendar-check-o time-icon" aria-hidden="true"></i> {{property.created_at}}
+			</div>
+			<div class="view">
+				<i class="fa fa-eye eye-icon" aria-hidden="true"></i> 25245 views
+			</div>
+		</div>
+		<div class="content-description">
+			<div class="left-description">
+				<div class="desc-details">
+					<div class="desc1">
+						<h2>{{property.description.upper()}}</h2>
+						<p><i class="fa fa-map-marker location-icon" aria-hidden="true"></i> Gaduwa, Municipal area council, Abuja</p>
+					</div>
+					<!-- <div class="desc2">
+						<h4>Description</h4>
+						<p>
+							4 units of 4 bedroom terrace duplex for sale
+						</p>
+						<p class="read-more">
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, repellat. <a href="#">Read more</a>
+						</p>
+					</div> -->
+					<div class="desc3">
+						<h4>Landmarks</h4>
+						<p><input type="checkbox" checked> {{property.landmark}}</p>
+						<!-- <p><input type="checkbox" checked> School</p> -->
+						<h4>Reviews</h4>
+					</div>
+
+				</div>
+				<div class="price">
+					&#8358;{{property.price}}
+				</div>
+			</div>
+			<div class="owner-information">
+				<div class="owners-heading">
+					<h4>owner information</h4>
+				</div>
+				<div class="owners-body">
+					<h4>{{user.firstname}} {{user.lastname}}</h4>
+					<p><i class="fa fa-phone" aria-hidden="true"></i> {{user.phone_no}} </p>
+					<!-- <p><i class="fa fa-mobile" aria-hidden="true"></i> +2347062682820 </p> -->
+					<p><i class="fa fa-envelope" aria-hidden="true"></i> {{user.email}} </p>
+					<div class="form">
+						<form action="" method="POST">
+							<h4>Reviews</h4>
+							<div class="group-input">
+								<label for="tex">Want to say something?</label>
+								<textarea name="text" class="form-input" id="" cols="30" >
+									
+								</textarea>
+								
+							</div>
+							<div class="group-input">
+								<label for="rate">Rate this property 1 - 5</label>
+								<input type="range" class="slider" name="rate" id="rate" min="1" max="5">
+								<p>Rate: <span id="show_rate"></span></p>
+								<input type="hidden" value={{property.id}}>
+							</div>
+							<button class="form-button" type="submit">Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+{% endblock %}
+			
