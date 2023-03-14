@@ -61,9 +61,9 @@ EOF  all  create  destroy  help  quit  show  update
 No known bugs at this time.
 
 ## Authors
- Ikenna Ezeanyaeji = https://github.com/charlykso
- Glory Chioma Anunah = https://github.com/glorycornel
- Juliet Owanku = https://github.com/julietowah
+ * Ikenna Ezeanyaeji = https://github.com/charlykso
+ * Glory Chioma Anunah = https://github.com/glorycornel
+ * Juliet Owanku = https://github.com/julietowah
  
  
  ## License
