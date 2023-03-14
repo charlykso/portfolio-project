@@ -5,7 +5,7 @@ from models.base_model import BaseModel, Base
 import models.property_img
 from os import getenv
 import sqlalchemy
-from sqlalchemy import Column, String, ForeignKey
+from sqlalchemy import Column, String, ForeignKey, Integer
 from sqlalchemy.orm import relationship
 
 
@@ -21,6 +21,7 @@ class Property(BaseModel, Base):
     search_term = Column(String(255), nullable=False)
     user_id = Column(String(60), ForeignKey('users.id'), nullable=False)
     type = Column(String(60), nullable=False)
+    price = Column(Integer, nullable=False)
     property_imgs = relationship("Property_img",
                               backref="property",
                               cascade="all, delete, delete-orphan")

@@ -1,226 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Authentified | Buy property</title>
-		<link rel="stylesheet" href="../static/css/buy-header.css" />
-		<link rel="stylesheet" href="../static/css/body.css" />
-		<link rel="stylesheet" href="../static/css/buy-section.css">
-		<link rel="stylesheet" href="../static/css/buy-footer.css">
-		<link rel="stylesheet" href="../static/css/buy-main.css">
-		<link
-			rel="icon"
-			href="../static/images/authentified-website-favicon-white.png"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-		/>
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"
-			integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		></script>
-	</head>
-	<body>
-		<div class="container">
-			<div class="header-container">
-				<header class="first-header">
-					<div class="header">
-						<div class="left-header">
-							<p>
-								<i
-									class="fa fa-envelope"
-									aria-hidden="true"
-									style="color: #f13054"
-								></i>
-								info@authentified.com
-							</p>
-							<p>
-								<i
-									class="fa fa-phone"
-									aria-hidden="true"
-									style="color: #f13054"
-								></i>
-								+2347062682820
-							</p>
-							<p>+2347062682820</p>
-						</div>
-						<div class="right-header">
-							<div class="socials">
-								<a
-									href="https://www.facebook.com/charlykso"
-									style="text-decoration: none"
-									><i
-										class="fa fa-check-square"
-										aria-hidden="true"
-										style="color: #f13054"
-									></i>
-									<span style="color: #fff">Fb</span>
-								</a>
-								<a href="#" style="text-decoration: none"
-									><i
-										class="fa fa-check-square"
-										aria-hidden="true"
-										style="color: #f13054"
-									></i>
-									<span style="color: #fff">Tw</span></a
-								>
-								<a href="#" style="text-decoration: none"
-									><i
-										class="fa fa-check-square"
-										aria-hidden="true"
-										style="color: #f13054"
-									></i>
-									<span style="color: #fff">In</span></a
-								>
-							</div>
-							<div class="btn-signin">
-								<a href="login.html">sign in</a>
-							</div>
-						</div>
-					</div>
-				</header>
-				<header class="second-header-bg">
-					<div class="second-header">
-						<div class="logo">
-							<a href="index.html">
-								<img
-									src="../static/images/authentified-high-resolution-logo-color-on-transparent-background.png"
-									alt=""
-								/>
-							</a>
-						</div>
-						<div class="nav">
-							<a href="buy.html">Buy</a>
-							<a href="#">Rent</a>
-							<a href="new_property.html">New Properties</a>
-							<a href="commercial.html">Commercial</a>
-						</div>
-					</div>
-				</header>
-			</div>
-			<section class="banner">
-				<div class="search">
-					<h1>Search for your property here</h1>
-					<div class="input">
-						<input type="text" placeholder="Keyword search only..." />
-						<button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-					</div>
-				</div>
-			</section>
-			<main class="main">
-				<div class="inside-main">
-					<div class="filter-results">
-						<h4>Filter Results</h4>
-					</div>
-					<div class="results">
-						<div class="upper-result">
-							<div class="result-img">
-								<div class="big-img">
-									<img src="../static/images/bg2.jpg" alt="">
-								</div>
-								<div class="smal-img">
-									<div class="inner-small-img img1">
-										<img src="../static/images/bg3.jpg" alt="">
-									</div>
-									<div class="inner-small-img img2">
-										<img src="../static/images/bg4.png" alt="">
-									</div>
-									<div class="inner-small-img img3">
-										<img src="../static/images/bg5.jpg" alt="">
-									</div>
-								</div>
-							</div>
-							<div class="details">
-								<div class="buttons">
-									<button class="sale">SALE</button>
-									<button class="new">NEW</button>
-								</div>
-								<div class="description">
-									<div class="inner-description">
-										<h4>4 unit bedroom terace duplex</h4>
-										<p>
-											<i class="fa fa-map-marker location" aria-hidden="true"></i> Gudwa
-											Municipal Area COuncil, Abuja
-										</p>
-										<p class="landmarks">
-											<i class="fa fa-shopping-bag" aria-hidden="true"></i>
-											Shooping Mall
-											<i class="fa fa-graduation-cap" aria-hidden="true"></i>
-											School
-										</p>
-									</div>
-								</div>
-								<div class="price">
-									<div class="text-price">
-										<p>Price</p>
-									</div>
-									<div class="amount">
-										<h4>#38,000,000</h4>
-										<button>Take a tour</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</main>
-			{% for user in users %}
-				<h2>{{user.firstname}} {{user.lastname}}</h2>
-				<h4></h4>
-			{% endfor %}
-			<footer class="footer">
-				<div class="top-footer">
-					<div class="first-item footer-flex">
-						<div class="first-item-img">
-							<img
-								src="../static/images/authentified-high-resolution-logo-white-on-transparent-background.png"
-								alt=""
-							/>
-						</div>
-						<div class="contact">
-							<p>No 9B Lorem ipsum dolor sit amet. Lorem, ipsum.</p>
-							<p>Lorem ipsum dolor sit amet.</p>
-							<p>info@authentified.com</p>
-							<p>+23462682820</p>
-							<p>+23462682820</p>
-						</div>
-					</div>
-					<div class="second-item footer-flex">
-						<h4>Solutions</h4>
-						Buy Rent New Property Commercial
-					</div>
-					<div class="third-item footer-flex">
-						<h4>Sorpport</h4>
-						FAQs Contac Feedback
-						<h4>COMPANY</h4>
-						About Terms & Conditions Privacy Policy
-					</div>
-					<div class="fourth-item footer-flex">
-						<h4>Subscribe to Our Newsletter</h4>
-						<p>
-							Join our subscribers list to get the latest news, updpate, and
-							special offerss delivered directly to your inbox.
-						</p>
-						<div class="footer-email">
-							<input type="email" placeholder="Email address" />
-						</div>
-						<input type="submit" value="Submit" />
-					</div>
-				</div>
-				<div class="bottom-footer-container">
-					<div class="bottom-footer">
-						<div class="left-text">
-							&copy; 2023 Authentified.ng. ALl right reserved
-						</div>
-						<div class="footer-socials"></div>
-					</div>
-				</div>
-			</footer>
+{% extends 'base.html' %}
+{% block title %}
+	Buy
+{% endblock %}
+{% block content %}
+	
+<section class="banner">
+	<div class="search">
+		<h1>Search for your property here</h1>
+		<div class="input">
+			<input type="text" placeholder="Keyword search only..." />
+			<button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
 		</div>
-	</body>
-</html>
+	</div>
+</section>
+<main class="main">
+	<div class="inside-main">
+		<div class="filter-results">
+			<h4>Filter Results</h4>
+		</div>
+		{% for property in properties %}
+			
+		<div class="results">
+			<div class="upper-result">
+				<div class="result-img">
+					{% for item in property.property_imgs[:	1] %}
+					<div class="big-img">
+						<img src={{item.img_path}} alt="">
+					</div>
+					{% endfor %}
+					
+				</div>
+				<div class="details">
+					<div class="buttons">
+						<button class="sale">{{property.availability.upper()}}</button>
+						<button class="new">NEW</button>
+					</div>
+					<div class="description">
+						<div class="inner-description">
+							<h4>{{property.description}}</h4>
+							<p>
+								<i class="fa fa-map-marker location" aria-hidden="true"></i> 
+								{{property.state}}
+							</p>
+							<p class="landmarks">
+								<i class="fa fa-compass" aria-hidden="true"></i>
+								{{property.landmark}} 
+							</p>
+						</div>
+					</div>
+					<div class="price">
+						<div class="text-price">
+							<p>Price</p>
+						</div>
+						<div class="amount">
+							<h4>#{{property.price}}</h4>
+							<!-- <h4>{{property.id}}</h4> -->
+							<button><a href="/properties/{{property.id}}">Take a tour</a></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</main>
+{% endblock %}

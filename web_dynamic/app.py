@@ -1,14 +1,15 @@
 #!/usr/bin/python3
 """This is for the buy page"""
 
+import os
 import uuid
+import datetime
 from hashlib import md5
 import json, requests
-# import models.property_img
 from models import storage
 from models.user import User
-# from models.property import Property
-# from models.property_img import Property_img
+from models.property import Property
+from models.property_img import Property_img
 # from models.address import Address
 # from os import environ
 from flask import Flask, request, render_template,\
@@ -114,7 +115,7 @@ def login():
                 session['cache_id'] = uuid.uuid4()
                 msg = 'Logged in successfully !'
 
-                return render_template("index.html", msg=msg)
+                return redirect(url_for("index", msg=msg))
 
         msg = "Incorrect email or password"
     return render_template("login.html", msg=msg)
@@ -127,19 +128,142 @@ def property():
                            cache_id=uuid.uuid4())
 
 @app.route("/buy", strict_slashes=False)
-def user():
-    """List of all users"""
-    users = storage.all(User).values()
-    users = sorted(users, key=lambda k: k.firstname)
-
+def buy():
+    """List of all properties"""
+    properties = storage.all(Property).values()
+    properties = sorted(properties, key=lambda k: k.description)
+    for val in properties:
+        for inval in val.property_imgs:
+            print(inval.img_path)
     return render_template("buy.html",
-                           users=users,
+                           properties=properties,
                            cache_id=uuid.uuid4())
 
-@app.route("/details/<property_id>", strict_slashes=False)
-def single_property(property_id):
+
+@app.route("/properties/<property_id>", strict_slashes=False)
+def details(property_id):
     """Get the details of one property"""
-    return render_template("details.html", cache_id=uuid.uuid4)
+
+    property = storage.get(Property, property_id)
+    user = storage.get(User, property.user_id)
+    print(user)
+    # for val in property.property_imgs[:1]:
+    #     print(val.img_path)
+    return render_template("details.html",
+                           property=property,
+                           user=user,
+                           cache_id=uuid.uuid4)
+
+
+@app.route("/sell", methods=['GET', 'POST'], strict_slashes=False)
+def sell():
+    """sell page"""
+    msg=""
+    err_msg = ""
+    args = request.args
+    if args is not None:
+        msg = args.get('msg')
+    if session['id']:
+        user_id = session['id']
+    if request.method == "POST":
+        gen_property_id = request.form['gen_property_id']
+        type = request.form['type']
+        status = request.form['status']
+        price = request.form['price']
+        user_id = request.form['user_id']
+        landmark = request.form['landmark']
+        state = request.form['state']
+        description = request.form['description']
+        availability = "For Sale"
+
+        if not gen_property_id or not type or not status or\
+            not price or not user_id or not landmark or not state or\
+                not description or not availability:
+                    err_msg = "Please fill the required feilds"
+                    return render_template("sell.html",
+                                           err_msg=err_msg)
+
+        url = "http://127.0.0.1:5003/api/v1/users/{}/properties".format(user_id)
+        res = requests.post(url, json = {
+            "user_id": user_id,\
+            "gen_property_id": gen_property_id,\
+            "status": status,\
+            "type": type,\
+            "landmark": landmark,\
+            "state": state,\
+            "price": price,\
+            "description": description,\
+            "availability": availability
+        })
+
+        if res.status_code != 201:
+            err_msg= res.status_code
+            return render_template("sell.html", err_msg=msg)
+
+        msg = "Property created successfully"
+        return render_template("sell.html", msg=msg)
+    user = storage.get(User, user_id)
+    new_list = []
+    for property in user.properties:
+        new_list.append(property)
+    return render_template("sell.html",
+                           property=new_list,
+                           msg=msg)
+
+
+@app.route("/uploadImage", methods=['POST'], strict_slashes=False)
+def uploadImages():
+    """for property image upload"""
+    msg=''
+    err_msg = ' '
+    filepath = 'web_dynamic/static/images/property_images/{}'
+    if request.method == "POST":
+        if request.files is not None:
+            for image in request.files:
+                
+                # print(request.files[image].filename)
+                # print(request.form['property_id'])
+                item = request.files[image].filename
+                request.files[image].save(filepath.format(item))
+                date = datetime.datetime.now()
+
+                """getting the image extension"""
+                file_tup = os.path.splitext(item)
+                file_ext = file_tup[1]
+
+                
+                src = filepath.format(item)
+                dest = filepath.format(date)
+                dest = dest.strip(".,-")\
+                    .replace(" ", "").replace(":", "_").replace(".", "_")
+                img_dest = dest+file_ext
+
+                """renaming the file"""
+                os.rename(src, img_dest)
+
+                img_dest = img_dest[12:]
+                print(img_dest)
+                x = {
+                    "img_path" : img_dest,
+                    "property_img": request.form["property_id"]
+                }
+                y = json.dumps(x)
+                
+                singleImage = Property_img(y)
+                singleImage.property_id = request.form['property_id']
+                singleImage.img_path = img_dest
+                
+                # print(singleImage)
+                singleImage.save()
+                
+            msg = "Image uploaded successfully"
+            return redirect(url_for("sell", msg=msg))
+        
+        err_msg = "Please add an images"
+        return render_template("sell.html", err_msg=err_msg)
+        # print(request.form)
+
+    return redirect(url_for("sell"))
 
 
 @app.route('/logout')

@@ -8,19 +8,19 @@
 	
 }
 .img-area .big-img{
-	flex-basis: 90%;
+	flex-basis: 80%;
 }
 .img-area .big-img img{
 	width: 100%;
 	height: 100%;
 }
 .small-img{
-	width: 275px;
+	width: 280px;
 	align-content: stretch;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	gap: 6px;
+	gap: 4px;
 }
 .small-img img{
 	width: 100%;
@@ -28,7 +28,7 @@
 }
 .under-img{
 	display: flex;
-	/* justify-content: space-between; */
+	justify-content: space-between;
 	padding: 10px 0 10px;
 	align-items: center;
 }
@@ -72,11 +72,13 @@
 	flex-basis: 70%;
 	font-family: Arial, Helvetica, sans-serif;
 	border-radius: 5px;
+	justify-content: space-between;
 }
 .left-description .price{
 	color: #F13054;
 	font-weight: 700;
 }
+
 .desc-details .desc1{
 	line-height: 3rem;
 }
@@ -118,4 +120,50 @@
 }
 .owner-information .owners-body p{
 	color: #F13054;
+}
+
+/* for review form */
+.form{
+	padding: 10px;
+	border-top: 2px solid #F13054;
+	margin-top: 10px;
+}
+.form-group{
+  margin: 10px auto;
+  width: 100%;
+}
+.form-group select option{
+  font: 500 1rem 'Roboto', sans-serif;
+}
+.form-input{
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  box-sizing: border-box;
+  border-radius: var(--border-redius);
+  border: 1px solid #dddddd;
+  outline: none;
+  background: #FFFFFF;
+  transition: background 0.2s, border-color 0.2s;
+  font: 500 1rem 'Roboto', sans-serif;
+}
+.slider{
+	text-align: center;
+	width: 100%;
+}
+.form-button{
+  width: 100%;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  background-color: #F13054;
+}
+.form-button{
+  text-align: center;
+}
+.form-button:hover{
+  background: #16706a;
 }
