@@ -1489,15 +1489,6 @@
         "documentation": {}
     },
     {
-        "label": "property",
-        "kind": 2,
-        "importPath": "web_dynamic.app",
-        "description": "web_dynamic.app",
-        "peekOfCode": "def property():\n    \"\"\"List all the users\"\"\"\n    return render_template(\"testbase.html\",\n                           cache_id=uuid.uuid4())\n@app.route(\"/buy\", strict_slashes=False)\ndef buy():\n    \"\"\"List of all properties\"\"\"\n    properties = storage.all(Property).values()\n    properties = sorted(properties, key=lambda k: k.description)\n    for val in properties:",
-        "detail": "web_dynamic.app",
-        "documentation": {}
-    },
-    {
         "label": "buy",
         "kind": 2,
         "importPath": "web_dynamic.app",
@@ -1530,6 +1521,33 @@
         "importPath": "web_dynamic.app",
         "description": "web_dynamic.app",
         "peekOfCode": "def uploadImages():\n    \"\"\"for property image upload\"\"\"\n    msg=''\n    err_msg = ' '\n    filepath = 'web_dynamic/static/images/property_images/{}'\n    if request.method == \"POST\":\n        if request.files is not None:\n            for image in request.files:\n                # print(request.files[image].filename)\n                # print(request.form['property_id'])",
+        "detail": "web_dynamic.app",
+        "documentation": {}
+    },
+    {
+        "label": "my_properties",
+        "kind": 2,
+        "importPath": "web_dynamic.app",
+        "description": "web_dynamic.app",
+        "peekOfCode": "def my_properties(user_id):\n    \"\"\"List all the user properties\"\"\"\n    myProperties = []\n    properties = storage.all(Property).values()\n    for val in properties:\n        if val.user_id == user_id:\n            myProperties.append(val)\n    # for x in myProperties:\n    #     for y in x.property_imgs:\n    #         print(y.img_path)",
+        "detail": "web_dynamic.app",
+        "documentation": {}
+    },
+    {
+        "label": "update",
+        "kind": 2,
+        "importPath": "web_dynamic.app",
+        "description": "web_dynamic.app",
+        "peekOfCode": "def update(property_id):\n    \"\"\"Get the details of one property\"\"\"\n    property = storage.get(Property, property_id)\n    user = storage.get(User, property.user_id)\n    # print(user)\n    # for val in property.property_imgs[:1]:\n    #     print(val.img_path)\n    return render_template(\"details.html\",\n                           property=property,\n                           user=user,",
+        "detail": "web_dynamic.app",
+        "documentation": {}
+    },
+    {
+        "label": "delete_property",
+        "kind": 2,
+        "importPath": "web_dynamic.app",
+        "description": "web_dynamic.app",
+        "peekOfCode": "def delete_property(property_id):\n    \"\"\"delete property by passing the id\"\"\"\n    msg=''\n    property = storage.get(Property, property_id)\n    # user = storage.get(User, property.user_id)\n    # print(user)\n    # for val in property.property_imgs[:1]:\n    #     print(val.img_path)\n    print(\"It is working now\")\n    msg = \"Successful!\"",
         "detail": "web_dynamic.app",
         "documentation": {}
     },
