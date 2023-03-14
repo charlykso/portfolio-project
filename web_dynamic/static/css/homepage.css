@@ -9,6 +9,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-bottom: 10px;
 }
   
 .baner .first{
@@ -17,7 +18,7 @@
 }
   
 .baner .first h1{
-	color: #020347;
+	color: #fff;
 	font-family: 'Work Sans', sans-serif;
 	font-size: 70px;
 }
@@ -57,8 +58,8 @@ justify-content: center;
 .footer{
 	width: 100%;
 	background-color: #020347;
-    position: sticky;
-    bottom: 0;
+    /* position: sticky;
+    bottom: 0; */
 }
 .top-footer{
 	margin: auto;
@@ -147,6 +148,9 @@ justify-content: center;
     font-family: 'Work Sans', sans-serif;
     color: #020347;
     font-weight: bolder;
+}
+.last{
+	display: flex;
 }
 .last hr{
     border-top: 3px dashed #F03B23;
