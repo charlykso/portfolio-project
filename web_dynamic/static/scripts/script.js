@@ -18,20 +18,36 @@ $(document).ready(function () {
 	}
 
 	var property_id = null;
+	// getting each element with the delete btn
 	$(".deletebtn").each(function (indexInArray, valueOfElement) { 
-		console.log($(valueOfElement));
+		// console.log($(valueOfElement));
 		 $(valueOfElement).click(function () {
 			var value = $(valueOfElement).siblings('.propertyId').data('id');
-			// var value = $('.propertyId').data('id');
+			
 			property_id = value
-			console.log(value);
-			$.ajax({
-				url: '/properties/property_id',
-				type: 'DELETE',
-				success: function(result) {
-					console.log("Success");
-				}
-			});
+			// console.log(value);
+			try{
+				$.ajax({
+					url: '/properties/'+property_id,
+					type: 'DELETE',
+					success: function(result) {
+						if (result.msg === "Successful") {
+							location.reload()
+							$('h5#psuccess').html(result.msg)
+							console.log(result.msg);
+						}
+					},
+					error: function(err) {
+						$("h5#perror").html(err.statusText)
+						console.log(err.statusText);
+					}
+					
+				});
+			} catch (error)
+			{
+				$("h5#perror").html(err.statusText)
+				console.log(error);
+			}
 		});
 	});
 

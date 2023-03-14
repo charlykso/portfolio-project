@@ -13,7 +13,7 @@ from models.property_img import Property_img
 # from models.address import Address
 # from os import environ
 from flask import Flask, request, render_template,\
-    redirect, url_for, session, jsonify
+    redirect, url_for, session, jsonify, abort
 from web_dynamic.collective.checkEmail import CheckEmail
 # from api.v1.app import close_db
 
@@ -268,9 +268,7 @@ def my_properties(user_id):
     for val in properties:
         if val.user_id == user_id:
             myProperties.append(val)
-    # for x in myProperties:
-    #     for y in x.property_imgs:
-    #         print(y.img_path)
+    
     for item in myProperties:
         print(item)
     return render_template("my_properties.html",
@@ -278,34 +276,52 @@ def my_properties(user_id):
                            cache_id=uuid.uuid4())
 
 
-@app.route("/edit/properties/<property_id>", methods=['GET'], strict_slashes=False)
+@app.route("/edit/properties/<property_id>", methods=['GET', 'POST'], strict_slashes=False)
 def update(property_id):
     """Get the details of one property"""
 
     property = storage.get(Property, property_id)
-    user = storage.get(User, property.user_id)
+    if property:
+        user = storage.get(User, property.user_id)
+        if request.method == "POST":
+            # print(property.search_term)
+            property.type = request.form['type']
+            property.status = request.form['status']
+            property.price = request.form['price']
+            property.landmark = request.form['landmark']
+            property.state = request.form['state']
+            property.description = request.form['description']
+            property.availability = "For Sale"
+            property.search_term = request.form['status'].upper()\
+                            +" "+request.form['state'].upper()\
+                                +" "+request.form['type'].upper()\
+                                    +" "+request.form['price']
+            property.save()
+            msg = "Successful"
+            return redirect(url_for('my_properties', msg=msg, user_id=session['id']))
+
+    print(property)
     # print(user)
-    # for val in property.property_imgs[:1]:
-    #     print(val.img_path)
-    return render_template("details.html",
+    return render_template("edit.html",
                            property=property,
                            user=user,
                            cache_id=uuid.uuid4)
 
 
-@app.route("/properties/<property_id>", methods=['DELETE'], strict_slashes=False)
+@app.route("/properties/<property_id>", methods=['DELETE', 'GET'], strict_slashes=False)
 def delete_property(property_id):
     """delete property by passing the id"""
     msg=''
     property = storage.get(Property, property_id)
-    # user = storage.get(User, property.user_id)
-    # print(user)
-    # for val in property.property_imgs[:1]:
-    #     print(val.img_path)
-
-    print("It is working now")
-    msg = "Successful!"
-    return redirect(url_for("buy", msg=msg))
+    
+    if property is not None:
+        # property.delete()
+        # storage.save()
+        msg = "Successful"
+    else:
+        msg = "Not Successful"
+        abort(400, msg)
+    return jsonify({'msg': msg})
 
 
 @app.route('/logout')

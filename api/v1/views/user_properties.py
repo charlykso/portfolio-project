@@ -94,7 +94,8 @@ def create_property(user_id=None):
         abort(400, "Missing the property id")
     search_term = request.get_json()['status'].upper()\
         +" "+request.get_json()['state'].upper()\
-            +" "+request.get_json()['type'].upper()
+            +" "+request.get_json()['type'].upper()\
+                +" "+request.get_json()['price']
 
     """query the central system endpoint to check if the property exists"""
     propertyRes = requests.get(

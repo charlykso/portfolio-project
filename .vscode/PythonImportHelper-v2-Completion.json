@@ -1529,7 +1529,7 @@
         "kind": 2,
         "importPath": "web_dynamic.app",
         "description": "web_dynamic.app",
-        "peekOfCode": "def my_properties(user_id):\n    \"\"\"List all the user properties\"\"\"\n    myProperties = []\n    properties = storage.all(Property).values()\n    for val in properties:\n        if val.user_id == user_id:\n            myProperties.append(val)\n    # for x in myProperties:\n    #     for y in x.property_imgs:\n    #         print(y.img_path)",
+        "peekOfCode": "def my_properties(user_id):\n    \"\"\"List all the user properties\"\"\"\n    myProperties = []\n    properties = storage.all(Property).values()\n    for val in properties:\n        if val.user_id == user_id:\n            myProperties.append(val)\n    for item in myProperties:\n        print(item)\n    return render_template(\"my_properties.html\",",
         "detail": "web_dynamic.app",
         "documentation": {}
     },
@@ -1538,7 +1538,7 @@
         "kind": 2,
         "importPath": "web_dynamic.app",
         "description": "web_dynamic.app",
-        "peekOfCode": "def update(property_id):\n    \"\"\"Get the details of one property\"\"\"\n    property = storage.get(Property, property_id)\n    user = storage.get(User, property.user_id)\n    # print(user)\n    # for val in property.property_imgs[:1]:\n    #     print(val.img_path)\n    return render_template(\"details.html\",\n                           property=property,\n                           user=user,",
+        "peekOfCode": "def update(property_id):\n    \"\"\"Get the details of one property\"\"\"\n    property = storage.get(Property, property_id)\n    if property:\n        user = storage.get(User, property.user_id)\n    print(property)\n    print(user)\n    return render_template(\"edit.html\",\n                           property=property,\n                           user=user,",
         "detail": "web_dynamic.app",
         "documentation": {}
     },
@@ -1547,7 +1547,7 @@
         "kind": 2,
         "importPath": "web_dynamic.app",
         "description": "web_dynamic.app",
-        "peekOfCode": "def delete_property(property_id):\n    \"\"\"delete property by passing the id\"\"\"\n    msg=''\n    property = storage.get(Property, property_id)\n    # user = storage.get(User, property.user_id)\n    # print(user)\n    # for val in property.property_imgs[:1]:\n    #     print(val.img_path)\n    print(\"It is working now\")\n    msg = \"Successful!\"",
+        "peekOfCode": "def delete_property(property_id):\n    \"\"\"delete property by passing the id\"\"\"\n    msg=''\n    property = storage.get(Property, property_id)\n    if property is not None:\n        # property.delete()\n        # storage.save()\n        msg = \"Successful\"\n    else:\n        msg = \"Not Successful\"",
         "detail": "web_dynamic.app",
         "documentation": {}
     },
