@@ -18,6 +18,7 @@ This project is interpreted/tested on Ubuntu 14.04 LTS using python3 (version 3.
 * def __str__(self) - String representation of the BaseModel class
 * def save(self) - Updates the attribute updated_at with the current datetime
 * def to_dict(self) - returns a dictionary containing all keys/values of the instance
+* def delete(self): - delete the current instance from the storage
 * Classes inherited from Base Model:
 
 * amenity.py
@@ -26,7 +27,7 @@ This project is interpreted/tested on Ubuntu 14.04 LTS using python3 (version 3.
 * review.py
 * state.py
 * user.py
-## web_dynamic/ directory contains the dynamic version of AirBnB clone(AirBnB_clone_v4):
+## web_dynamic/ directory contains the dynamic version of portfolio-project:
 /models/engine directory contains File Storage class that handles JASON serialization and deserialization :
 file_storage.py - serializes instances to a JSON file & deserializes back to instances
 
@@ -38,7 +39,6 @@ def save(self) - serializes __objects to the JSON file (path: __file_path)
  ## Examples of use
  
  Portfolio-project
-(hbnb) help
 
 Documented commands (type help <topic>):
 ========================================
@@ -61,9 +61,9 @@ EOF  all  create  destroy  help  quit  show  update
 No known bugs at this time.
 
 ## Authors
- * Ikenna Ezeanyaeji = https://github.com/charlykso
- * Glory Chioma Anunah = https://github.com/glorycornel
- * Juliet Owanku = https://github.com/julietowah
+ * [Ikenna Ezeanyaeji](https://github.com/charlykso)
+ * [Glory Chioma Anunah](https://github.com/glorycornel)
+ * [Juliet Owanku](https://github.com/julietowah)
  
  
  ## License
