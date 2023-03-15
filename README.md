@@ -12,24 +12,7 @@ this project is a real estate web app with a unique functionalities which will b
 ## Environment
 This project is interpreted/tested on Ubuntu 14.04 LTS using python3 (version 3.4.3)
 
-## base_model.py - The BaseModel class from which future classes will be derived
-
-* def __init__(self, *args, **kwargs) - Initialization of the base model
-* def __str__(self) - String representation of the BaseModel class
-* def save(self) - Updates the attribute updated_at with the current datetime
-* def to_dict(self) - returns a dictionary containing all keys/values of the instance
-* Classes inherited from Base Model:
-
-* amenity.py
-* city.py
-* place.py
-* review.py
-* state.py
-* user.py
-## web_dynamic/ directory contains the dynamic version of AirBnB clone(AirBnB_clone_v4):
-/models/engine directory contains File Storage class that handles JASON serialization and deserialization :
-file_storage.py - serializes instances to a JSON file & deserializes back to instances
-
+* users =
 def all(self) - returns the dictionary __objects
 def new(self, obj) - sets in __objects the obj with key .id
 def save(self) - serializes __objects to the JSON file (path: __file_path)
@@ -44,18 +27,7 @@ Documented commands (type help <topic>):
 ========================================
 EOF  all  create  destroy  help  quit  show  update
 
-(hbnb) all MyModel
-** class doesn't exist **
-(hbnb) create BaseModel
-7da56403-cc45-4f1c-ad32-bfafeb2bb050
-(hbnb) all BaseModel
-[[BaseModel] (7da56403-cc45-4f1c-ad32-bfafeb2bb050) {'updated_at': datetime.datetime(2017, 9, 28, 9, 50, 46, 772167), 'id': '7da56403-cc45-4f1c-ad32-bfafeb2bb050', 'created_at': datetime.datetime(2017, 9, 28, 9, 50, 46, 772123)}]
-(hbnb) show BaseModel 7da56403-cc45-4f1c-ad32-bfafeb2bb050
-[BaseModel] (7da56403-cc45-4f1c-ad32-bfafeb2bb050) {'updated_at': datetime.datetime(2017, 9, 28, 9, 50, 46, 772167), 'id': '7da56403-cc45-4f1c-ad32-bfafeb2bb050', 'created_at': datetime.datetime(2017, 9, 28, 9, 50, 46, 772123)}
-(hbnb) destroy BaseModel 7da56403-cc45-4f1c-ad32-bfafeb2bb050
-(hbnb) show BaseModel 7da56403-cc45-4f1c-ad32-bfafeb2bb050
-** no instance found **
-(hbnb) quit
+
 
 ## Bugs
 No known bugs at this time.
