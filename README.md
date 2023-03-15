@@ -12,6 +12,7 @@ this project is a real estate web app with a unique functionalities which will b
 ## Environment
 This project is interpreted/tested on Ubuntu 14.04 LTS using python3 (version 3.4.3)
 
+<<<<<<< HEAD
 ## base_model.py - The BaseModel class from which future classes will be derived
 
 * def __init__(self, *args, **kwargs) - Initialization of the base model
@@ -31,6 +32,9 @@ This project is interpreted/tested on Ubuntu 14.04 LTS using python3 (version 3.
 /models/engine directory contains File Storage class that handles JASON serialization and deserialization :
 file_storage.py - serializes instances to a JSON file & deserializes back to instances
 
+=======
+* users =
+>>>>>>> 9e9e0e6d1834bf082afdbe4ec464c4a3ddd1d3d2
 def all(self) - returns the dictionary __objects
 def new(self, obj) - sets in __objects the obj with key .id
 def save(self) - serializes __objects to the JSON file (path: __file_path)
@@ -44,18 +48,7 @@ Documented commands (type help <topic>):
 ========================================
 EOF  all  create  destroy  help  quit  show  update
 
-(hbnb) all MyModel
-** class doesn't exist **
-(hbnb) create BaseModel
-7da56403-cc45-4f1c-ad32-bfafeb2bb050
-(hbnb) all BaseModel
-[[BaseModel] (7da56403-cc45-4f1c-ad32-bfafeb2bb050) {'updated_at': datetime.datetime(2017, 9, 28, 9, 50, 46, 772167), 'id': '7da56403-cc45-4f1c-ad32-bfafeb2bb050', 'created_at': datetime.datetime(2017, 9, 28, 9, 50, 46, 772123)}]
-(hbnb) show BaseModel 7da56403-cc45-4f1c-ad32-bfafeb2bb050
-[BaseModel] (7da56403-cc45-4f1c-ad32-bfafeb2bb050) {'updated_at': datetime.datetime(2017, 9, 28, 9, 50, 46, 772167), 'id': '7da56403-cc45-4f1c-ad32-bfafeb2bb050', 'created_at': datetime.datetime(2017, 9, 28, 9, 50, 46, 772123)}
-(hbnb) destroy BaseModel 7da56403-cc45-4f1c-ad32-bfafeb2bb050
-(hbnb) show BaseModel 7da56403-cc45-4f1c-ad32-bfafeb2bb050
-** no instance found **
-(hbnb) quit
+
 
 ## Bugs
 No known bugs at this time.
@@ -68,15 +61,3 @@ No known bugs at this time.
  
  ## License
 Public Domain. No copy write protection.
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 

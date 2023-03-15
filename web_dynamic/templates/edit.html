@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+{% block title %}
+	Property details
+{% endblock %}
+{% block content %}
+
+<main class="main">
+	<div class="details-inside-main">
+		<div class="img-area">
+			{% for item in property.property_imgs[:1] %}
+			<div class="big-img">
+				<img src="{{url_for('static', filename=item.img_path[7:])}}" alt="">
+			</div>
+			{% endfor %}
+			<div class="small-img">
+				{% for image in property.property_imgs[:3] %}
+				<div class="small-img1 img">
+					<img src="{{url_for('static', filename=image.img_path[7:])}}" alt="">
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="under-img">
+			<div class="buttons">
+				<button class="sale">{{property.availability.upper()}}</button>
+				<button class="new">NEW</button>
+			</div>
+			<div class="time">
+				<i class="fa fa-calendar-check-o time-icon" aria-hidden="true"></i> {{property.created_at}}
+			</div>
+			<div class="view">
+				<i class="fa fa-eye eye-icon" aria-hidden="true"></i> 25245 views
+			</div>
+		</div>
+		<div class="content-description">
+			<div class="left-description">
+				<div class="desc-details">
+					<div class="desc1">
+						<h2>{{property.description.upper()}}</h2>
+						<p><i class="fa fa-map-marker location-icon" aria-hidden="true"></i> Gaduwa, Municipal area council, Abuja</p>
+					</div>
+					<!-- <div class="desc2">
+						<h4>Description</h4>
+						<p>
+							4 units of 4 bedroom terrace duplex for sale
+						</p>
+						<p class="read-more">
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, repellat. <a href="#">Read more</a>
+						</p>
+					</div> -->
+					<div class="desc3">
+						<h4>Landmarks</h4>
+						<p><input type="checkbox" checked> {{property.landmark}}</p>
+						<!-- <p><input type="checkbox" checked> School</p> -->
+						<div class="edit_property">
+							<h4>Edit property details</h4>
+							<form action="{{url_for('update', property_id=property.id)}}" method="POST">
+								<div class="col">
+									<div class="form-group">
+										<label for="description">Description</label>
+										<input type="text" name="description" value="{{property.description}}" class="form-input" placeholder="Description">
+									</div>
+									<div class="form-group">
+										<label for="state">State</label>
+										<input type="text" name="state" value="{{property.state}}" class="form-input" placeholder="State">
+									</div>
+								</div>
+								<div class="col">
+									<div class="form-group">
+										<label for="landmard">Landmark</label>
+										<input type="text" name="landmark" value="{{property.landmark}}" class="form-input" placeholder="Landmark">
+									</div>
+									<div class="form-group">
+										<label for="price">Price</label>
+										<input type="text" name="price" value="{{property.price}}" class="form-input" placeholder="Price">
+									</div>
+								</div>
+								<div class="col">
+									<div class="form-group">
+										<label for="status">Status</label>
+										<select name="status" class="form-input" id="role">
+											{% if property.status == "available" %}
+												<option value="available" selected>Available</option>
+												<option value="not available">Not Available</option>
+											{% else %}
+												<option value="available">Available</option>
+												<option value="not available" selected>Not Available</option>
+											{% endif %}
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="type">Type</label>
+										<select name="type" class="form-input" id="">
+											{% if property.type == "Building" %}
+												<option value="Building" selected>Building</option>
+												<option value="Land">Land</option>
+											{% else %}
+												<option value="Building">Building</option>
+												<option value="Land" selected>Land</option>
+											{% endif %}
+										</select>
+									</div>
+									<input type="hidden" name="user_id" value="{{property.user_id}}">
+									<input type="hidden" name="property_id" value="{{property.gen_property_id}}">
+									<input type="hidden" name="availability" value="{{property.availability}}">
+								</div>
+								<div class="form-group">
+									<input type="submit" class="form-button" value="Submit">
+								</div>
+							</form>
+						</div>
+					</div>
+
+				</div>
+				<div class="price">
+					&#8358;{{property.price}}
+				</div>
+			</div>
+			<div class="owner-information">
+				<div class="owners-heading">
+					<h4>owner information</h4>
+				</div>
+				<div class="owners-body">
+					<h4>{{user.firstname}} {{user.lastname}}</h4>
+					<p><i class="fa fa-phone" aria-hidden="true"></i> {{user.phone_no}} </p>
+					<!-- <p><i class="fa fa-mobile" aria-hidden="true"></i> +2347062682820 </p> -->
+					<p><i class="fa fa-envelope" aria-hidden="true"></i> {{user.email}} </p>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+{% endblock %}

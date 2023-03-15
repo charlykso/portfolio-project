@@ -22,9 +22,7 @@
 	flex-basis: 58%;
 	justify-content: space-between;
 }
-/* .first-header .header .left-header p{
-	margin-right: 15px;
-} */
+
 .first-header .header .right-header{
 	display: flex;
 	justify-content: space-between;

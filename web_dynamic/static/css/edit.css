@@ -1,0 +1,58 @@
+.col{
+	display: flex;
+	gap: 4rem;
+}
+.form-group{
+  margin: 10px auto;
+  width: 100%;
+}
+.form-group select option{
+  font: 500 1rem 'Roboto', sans-serif;
+}
+.form-input{
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  box-sizing: border-box;
+  border-radius: var(--border-redius);
+  border: 1px solid #dddddd;
+  outline: none;
+  background: #FFFFFF;
+  transition: background 0.2s, border-color 0.2s;
+  font: 500 1rem 'Roboto', sans-serif;
+}
+.form-input:focus{
+  border-color: #F13054;
+  background: #FFFFFF;
+}
+.form-button{
+  width: 100%;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #FFFFFF;
+  border: none;
+  border-radius: var(--border-redius);
+  outline: none;
+  cursor: pointer;
+  background: var(--color-primary);
+  
+}
+.form-button{
+  text-align: center;
+  border: 1px solid #F13054;
+  color: #000;
+
+}
+.form-button:hover{
+  background: #F13054;
+  color: #fff;
+}
+.form-button:active{
+  transform: scale(0.98);
+}
+.edit_property{
+	border-top: 2px solid #F13054;
+	margin-top: 10px;
+	padding-top: 5px;
+}
