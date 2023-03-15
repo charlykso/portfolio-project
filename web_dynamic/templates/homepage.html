@@ -6,12 +6,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="../static/css/homepage.css">
+    <link rel="stylesheet" href="../static/css/buy-header.css">
     <link
 		rel="icon"
 		href="../static/images/authentified-website-favicon-color.png"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 </head>
 <body>
+    <div class="header-container" style="z-index: 1;">
+        <header class="first-header">
+            <div class="header">
+                <div class="left-header">
+                    <p>
+                        <i
+                            class="fa fa-envelope"
+                            aria-hidden="true"
+                            style="color: #f13054"
+                        ></i>
+                        info@authentified.com
+                    </p>
+                    <p>
+                        <i
+                            class="fa fa-phone"
+                            aria-hidden="true"
+                            style="color: #f13054"
+                        ></i>
+                        +2347062682820
+                    </p>
+                    <p>+2347062682820</p>
+                </div>
+                <div class="right-header">
+                    <div class="socials">
+                        <a
+                            href="https://www.facebook.com/charlykso"
+                            style="text-decoration: none"
+                            ><img src="../static/images/Social-facebook.1024.png" width="30px"  alt="">
+                            <!-- <span style="color: #fff">Fb</span> -->
+                        </a>
+                        <a href="#" style="text-decoration: none"
+                            ><img src="../static/images/Twitter-Emblem.png" width="46px" alt="">
+                            <!-- <span style="color: #fff">Tw</span> -->
+                            </a
+                        >
+                        <a href="#" style="text-decoration: none"
+                            >
+                            <img src="../static/images/super+tiny+icons+linkedin.png" width="27px"alt="">
+                            <!-- <span style="color: #fff">In</span> -->
+                            </a
+                        >
+                    </div>
+                    <div class="btn-signin">
+                        <a href="#">sign in</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header class="second-header-bg">
+            <div class="second-header">
+                <div class="logo">
+                    <a href="index.html">
+                        <img
+                            src="../static/images/authentified-high-resolution-logo-color-on-transparent-background.png"
+                            alt=""
+                        />
+                    </a>
+                </div>
+                <div class="nav">
+                    <a href="#">Buy</a>
+                    <a href="#">Sell</a>
+                    <a href="#">New Properties</a>
+                    <a href="#">Commercial</a>
+                </div>
+            </div>
+        </header>
+    </div>
 <section class="baner">
     <div class="first">
         <h1>AUTHENTIC. BUY IT. SELL IT.</h1>
@@ -25,7 +93,7 @@
 <!-- Slider main container -->
 <div class="swiper">
 <!-- Additional required wrapper -->
-<div class="swiper-wrapper">
+<div class="swiper-wrapper" >
 <!-- Slides -->
 <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/fJeDkP1bwga84ARChP5oSfmw3cGe3y3ukOlK1EezUWzsSwe3UWaKJOo4tZ9R3hWAeRSA6gh8AyNLsr5XN0AYdiiHVss7P7ZMIcxZFUWGrPscALdTRAt1q1dZiJUwvL8sXWF6uxmuwA=w2400"></div>
 <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/RdnxPJXnd2Z7C_283QaOMtK8T8whb_5Rd1-s8txIzf-067TCMejAnQIi1FbaT_bTNokiOqb1A8dLhkp25n8DjlulRcCfYX3AOyPWB8EQagYZLnPQ8WJSbw5oYTO6tk3AEofmuua-2w=w2400"></div>
@@ -38,6 +106,7 @@
 <!-- If we need navigation buttons -->
 <div class="swiper-button-prev"></div>
 <div class="swiper-button-next"></div>
+</div>
 </div>
 <div class="third-div">
 <img src="https://lh3.googleusercontent.com/8_4JmfeNmdz4TKh0yun8Gr98BkGx6elKznrQoIFMviNbgzulcYabXqz8-uaXvOwGp7DCEFLMoPQ-B0TBTdH4t0HGoc0iDNc3LEnVZgY_--2H83SZcTWcEyFrqObtkkfwmZIcNW1G9g=w2400" alt="troley"/>
@@ -56,24 +125,32 @@
 <a href="p-last"> View Properties </a>
 <hr>
 </div>
-<h3>Latest Properties</h3>
+<h3 class="latest-h3">Latest Properties</h3>
 <div class="last">
-    <div>
-        <p><img src="https://lh3.googleusercontent.com/smPvHgJcgS9aOTBBEBGXRnnKMODr-kgTxxA9-ePeKjb_iaDZg59quG6t8IaSbHahjLZpZwSH7TKQMGWxuKoMqF8s2uZAa9KymSRDigeTYPQvNtSEz2z3779fLX7CkgCMX_IfU7hZmQ=w2400" alt="house"></p>
-        <a href="luxury" class="address">luxury home at xyz street, project estate, Abuja, Nigeria</a>
-        <p class="text"><a href="check"> see more</a></p>
+    <div class="latest_img">
+        <div class="latest-small-img">
+            <img src="https://lh3.googleusercontent.com/smPvHgJcgS9aOTBBEBGXRnnKMODr-kgTxxA9-ePeKjb_iaDZg59quG6t8IaSbHahjLZpZwSH7TKQMGWxuKoMqF8s2uZAa9KymSRDigeTYPQvNtSEz2z3779fLX7CkgCMX_IfU7hZmQ=w2400" alt="house">
+        </div>
+        <div class="small-text">
+            <a href="luxury" class="address">luxury home at xyz street, project estate, Abuja, Nigeria</a>
+            <button>See more</button>
+        </div>
     </div>
-    <div>
-        <p><img src="https://lh3.googleusercontent.com/qJWJrk6gJxvOJvO-SpHMCcWOanEHV8udLttZuCp7knF4exkbEa_Wy4lJGydawvlfK20aaUvm59AY7mGUrWRjgMtQ7x7QDLyCt0pjzakQi05Em812goyQfexk9E6AaA9e9GMRoHzjiw=w2400" alt="house"></p>
-        <a href="dream" class="address">dream home at xyz street, project estate, Abuja, Nigeria</a>
-        <p class="text"><a href="check"> see more</a></p>
+    <div class="latest_img">
+        <div class="latest-small-img">
+            <img src="https://lh3.googleusercontent.com/qJWJrk6gJxvOJvO-SpHMCcWOanEHV8udLttZuCp7knF4exkbEa_Wy4lJGydawvlfK20aaUvm59AY7mGUrWRjgMtQ7x7QDLyCt0pjzakQi05Em812goyQfexk9E6AaA9e9GMRoHzjiw=w2400" alt="house">
+        </div>
+        <div class="small-text">
+            <a href="dream" class="address">dream home at xyz street, project estate, Abuja, Nigeria</a>
+            <button>See more</button>
+        </div>
     </div>
 </div>    
 <footer class="footer">
     <div class="top-footer">
         <div class="first-item footer-flex">
             <div class="first-item-img">
-                <img src="https://lh3.googleusercontent.com/vLD30fH42SVeiQTbiDDUjt3c5UyNCI6g2UiKMaqUyubqR6F366W6oCAPjDNy7l_TW4U5C4JxDy8_gPJh8_hhTyL8WUpAUgaMGCBx_OqJyPYJvtZ143NDNrz76_gpNLNGu-R_nMjLqw=w2400" alt="logo">
+                <img src="../static/images/authentified-high-resolution-logo-white-on-transparent-background.png" alt="logo">
                 </div>
                 <div class="contact">
                     <p>No 3 ALX street, lagos intranet,Nigeria.</p>
