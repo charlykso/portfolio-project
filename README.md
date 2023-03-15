@@ -32,7 +32,7 @@ Classes inherited from Base Model:
 * [property.py](https://github.com/charlykso/portfolio-project/blob/master/models/property.py)
 * [user.py](https://github.com/charlykso/portfolio-project/blob/master/models/user.py)
 * [review.py](https://github.com/charlykso/portfolio-project/blob/master/models/review.py)
-* [property_img.py]((https://github.com/charlykso/portfolio-project/blob/master/models/property_img.py))
+* [property_img.py](https://github.com/charlykso/portfolio-project/blob/master/models/property_img.py)
 * [db_storage.py](https://github.com/charlykso/portfolio-project/blob/master/models/engine/db_storage.py)
 
 ## Description
