@@ -92,6 +92,7 @@ div.swiper-slide img{
 .top-footer .footer-flex{
 	flex-basis: 240px;
 	line-height: 25px;
+	padding-bottom: 10px;
 }
 .top-footer .footer-flex h4{
 	color: #fff;
@@ -114,12 +115,13 @@ div.swiper-slide img{
 .footer .bottom-footer-container{
 	width: 100%;
 	background-color: #06051b;
+	
 }
 .footer .bottom-footer-container .bottom-footer{
 	margin: auto;
 	width: 85%;
-	height: 20px;
-	display: fixed;
+	height: 60px;
+	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	color: #fff;
@@ -217,3 +219,4 @@ div.swiper-slide img{
 	color: #F03B23;
 	border: 1px solid #F03B23;
 }
+
