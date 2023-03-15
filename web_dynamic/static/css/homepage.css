@@ -10,11 +10,9 @@
 	justify-content: center;
 	align-items: center;
 	margin-bottom: 10px;
-	z-index: -1;
 }
 div.header-container{
 	margin-bottom: 10px;
-	z-index: 1;
 }
   
 .baner .first{
