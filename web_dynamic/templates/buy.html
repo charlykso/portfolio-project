@@ -8,8 +8,8 @@
 	<div class="search">
 		<h1>Search for your property here</h1>
 		<div class="input">
-			<input type="text" placeholder="Keyword search only..." />
-			<button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+			<input type="text" id="search-input" placeholder="Keyword search only..." />
+			<button id="search-property" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
 		</div>
 	</div>
 </section>
@@ -18,6 +18,9 @@
 		<div class="filter-results">
 			<h4>Filter Results</h4>
 		</div>
+		<div id="filter-results"></div>
+		{% if properties %}
+			
 		{% for property in properties %}
 			
 		<div class="results">
@@ -62,6 +65,9 @@
 			</div>
 		</div>
 		{% endfor %}
+		{% else %}
+			<h4>No property found</h4>
+		{% endif %}
 	</div>
 </main>
 {% endblock %}

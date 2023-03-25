@@ -126,9 +126,9 @@ def buy():
     """List of all properties"""
     properties = storage.all(Property).values()
     properties = sorted(properties, key=lambda k: k.description)
-    for val in properties:
-        for inval in val.property_imgs:
-            print(inval.img_path)
+    # for val in properties:
+        # for inval in val.property_imgs:
+        #     print(inval.img_path)
     return render_template("buy.html",
                            properties=properties,
                            cache_id=uuid.uuid4())
@@ -214,9 +214,6 @@ def uploadImages():
     if request.method == "POST":
         if request.files is not None:
             for image in request.files:
-                
-                # print(request.files[image].filename)
-                # print(request.form['property_id'])
                 item = request.files[image].filename
                 request.files[image].save(filepath.format(item))
                 date = datetime.datetime.now()
@@ -269,8 +266,8 @@ def my_properties(user_id):
         if val.user_id == user_id:
             myProperties.append(val)
     
-    for item in myProperties:
-        print(item)
+    # for item in myProperties:
+        # print(item)
     return render_template("my_properties.html",
                            properties=myProperties,
                            cache_id=uuid.uuid4())
@@ -300,7 +297,7 @@ def update(property_id):
             msg = "Successful"
             return redirect(url_for('my_properties', msg=msg, user_id=session['id']))
 
-    print(property)
+    # print(property)
     # print(user)
     return render_template("edit.html",
                            property=property,
@@ -322,6 +319,32 @@ def delete_property(property_id):
         msg = "Not Successful"
         abort(400, msg)
     return jsonify({'msg': msg})
+
+
+@app.route("/properties/search/<search_word>", methods=['POST', 'GET'],
+           strict_slashes=False)
+def search_proeprty(search_word):
+    """search a property"""
+    property_list = []
+    if search_word:
+        search_word = search_word.replace(",", "")
+        objs = storage.all(Property)
+        for key, value in objs.items():
+            search_sentence = value.search_term.replace(",", "")
+            search_word_list = search_sentence.split()
+            # print(search_sentence)
+            if search_word.upper() in search_word_list:
+                property_list.append(value.to_dict())
+        for prop in property_list:
+            # print(prop['id'])
+            property = storage.get(Property, prop['id'])
+            for val in property.property_imgs[:1]:
+                # print(val.img_path)
+                prop['img_path'] = val.img_path
+        # print(property_list)
+        return property_list
+    return property_list
+    
 
 
 @app.route('/logout')

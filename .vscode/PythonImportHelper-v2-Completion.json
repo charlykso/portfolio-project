@@ -1493,7 +1493,7 @@
         "kind": 2,
         "importPath": "web_dynamic.app",
         "description": "web_dynamic.app",
-        "peekOfCode": "def buy():\n    \"\"\"List of all properties\"\"\"\n    properties = storage.all(Property).values()\n    properties = sorted(properties, key=lambda k: k.description)\n    for val in properties:\n        for inval in val.property_imgs:\n            print(inval.img_path)\n    return render_template(\"buy.html\",\n                           properties=properties,\n                           cache_id=uuid.uuid4())",
+        "peekOfCode": "def buy():\n    \"\"\"List of all properties\"\"\"\n    properties = storage.all(Property).values()\n    properties = sorted(properties, key=lambda k: k.description)\n    # for val in properties:\n        # for inval in val.property_imgs:\n        #     print(inval.img_path)\n    return render_template(\"buy.html\",\n                           properties=properties,\n                           cache_id=uuid.uuid4())",
         "detail": "web_dynamic.app",
         "documentation": {}
     },
@@ -1520,7 +1520,7 @@
         "kind": 2,
         "importPath": "web_dynamic.app",
         "description": "web_dynamic.app",
-        "peekOfCode": "def uploadImages():\n    \"\"\"for property image upload\"\"\"\n    msg=''\n    err_msg = ' '\n    filepath = 'web_dynamic/static/images/property_images/{}'\n    if request.method == \"POST\":\n        if request.files is not None:\n            for image in request.files:\n                # print(request.files[image].filename)\n                # print(request.form['property_id'])",
+        "peekOfCode": "def uploadImages():\n    \"\"\"for property image upload\"\"\"\n    msg=''\n    err_msg = ' '\n    filepath = 'web_dynamic/static/images/property_images/{}'\n    if request.method == \"POST\":\n        if request.files is not None:\n            for image in request.files:\n                item = request.files[image].filename\n                request.files[image].save(filepath.format(item))",
         "detail": "web_dynamic.app",
         "documentation": {}
     },
@@ -1529,7 +1529,7 @@
         "kind": 2,
         "importPath": "web_dynamic.app",
         "description": "web_dynamic.app",
-        "peekOfCode": "def my_properties(user_id):\n    \"\"\"List all the user properties\"\"\"\n    myProperties = []\n    properties = storage.all(Property).values()\n    for val in properties:\n        if val.user_id == user_id:\n            myProperties.append(val)\n    for item in myProperties:\n        print(item)\n    return render_template(\"my_properties.html\",",
+        "peekOfCode": "def my_properties(user_id):\n    \"\"\"List all the user properties\"\"\"\n    myProperties = []\n    properties = storage.all(Property).values()\n    for val in properties:\n        if val.user_id == user_id:\n            myProperties.append(val)\n    # for item in myProperties:\n        # print(item)\n    return render_template(\"my_properties.html\",",
         "detail": "web_dynamic.app",
         "documentation": {}
     },
@@ -1538,7 +1538,7 @@
         "kind": 2,
         "importPath": "web_dynamic.app",
         "description": "web_dynamic.app",
-        "peekOfCode": "def update(property_id):\n    \"\"\"Get the details of one property\"\"\"\n    property = storage.get(Property, property_id)\n    if property:\n        user = storage.get(User, property.user_id)\n    print(property)\n    print(user)\n    return render_template(\"edit.html\",\n                           property=property,\n                           user=user,",
+        "peekOfCode": "def update(property_id):\n    \"\"\"Get the details of one property\"\"\"\n    property = storage.get(Property, property_id)\n    if property:\n        user = storage.get(User, property.user_id)\n        if request.method == \"POST\":\n            # print(property.search_term)\n            property.type = request.form['type']\n            property.status = request.form['status']\n            property.price = request.form['price']",
         "detail": "web_dynamic.app",
         "documentation": {}
     },
@@ -1548,6 +1548,15 @@
         "importPath": "web_dynamic.app",
         "description": "web_dynamic.app",
         "peekOfCode": "def delete_property(property_id):\n    \"\"\"delete property by passing the id\"\"\"\n    msg=''\n    property = storage.get(Property, property_id)\n    if property is not None:\n        # property.delete()\n        # storage.save()\n        msg = \"Successful\"\n    else:\n        msg = \"Not Successful\"",
+        "detail": "web_dynamic.app",
+        "documentation": {}
+    },
+    {
+        "label": "search_proeprty",
+        "kind": 2,
+        "importPath": "web_dynamic.app",
+        "description": "web_dynamic.app",
+        "peekOfCode": "def search_proeprty(search_word):\n    \"\"\"search a property\"\"\"\n    property_list = []\n    if search_word:\n        search_word = search_word.replace(\",\", \"\")\n        objs = storage.all(Property)\n        for key, value in objs.items():\n            search_sentence = value.search_term.replace(\",\", \"\")\n            search_word_list = search_sentence.split()\n            # print(search_sentence)",
         "detail": "web_dynamic.app",
         "documentation": {}
     },
